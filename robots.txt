@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://travel-egypt.github.io/hurghada-tours/sitemap.xml
