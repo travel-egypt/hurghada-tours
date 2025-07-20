@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hurghada Tours - Booking</title>
+  <title>Hurghada Tours - City & Sea Trips</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
+      background-color: #f2f2f2;
       margin: 0;
       padding: 0;
     }
@@ -19,84 +19,87 @@
     }
     .section {
       padding: 40px 20px;
-      max-width: 600px;
+      max-width: 900px;
       margin: auto;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    h2 {
+    .tour {
+      background-color: white;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    .tour h2 {
       color: #023e8a;
     }
-    form input, form select, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+    .tour p {
+      line-height: 1.6;
     }
-    form button {
-      background-color: #0077b6;
+    .tour img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+    .btn {
+      background-color: #00a8e8;
       color: white;
-      padding: 12px 20px;
-      border: none;
+      padding: 10px 20px;
+      text-decoration: none;
       border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    form button:hover {
-      background-color: #005f8e;
-    }
-    .note {
-      font-size: 14px;
-      color: #777;
+      display: inline-block;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Tour Booking Form</h1>
+  <h1>Discover Our Hurghada Tours</h1>
 </header>
 
 <section class="section">
-  <h2>Reserve Your Spot</h2>
 
-  <form action="https://formsubmit.co/m47199563@gmail.com" method="POST" onsubmit="return sendWhatsApp();">
-    <input type="text" name="name" id="name" placeholder="Full Name" required />
-    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required />
-    <select name="trip" id="trip" required>
-      <option value="">Select a Trip</option>
-      <option value="Sea Trip">Sea Trip</option>
-      <option value="Desert Safari">Desert Safari</option>
-      <option value="Luxor Tour">Luxor Tour</option>
-      <option value="Cairo Tour">Cairo Tour</option>
-      <option value="Aswan Tour">Aswan Tour</option>
-    </select>
-    <input type="date" name="date" id="date" required />
-    <textarea name="notes" id="notes" placeholder="Additional notes (optional)"></textarea>
-    <input type="hidden" name="_captcha" value="false">
-    <button type="submit">Submit Booking</button>
-  </form>
+  <!-- Sea Trips -->
+  <div class="tour">
+    <h2>🌊 Sea Trips</h2>
+    <img src="https://travel-egypt.github.io/hurghada-tours/sea1.jpg" alt="Sea Trip">
+    <p>Join us for unforgettable boat trips to the Red Sea islands. Enjoy snorkeling, sunbathing, and a delicious onboard lunch during your island cruise.</p>
+    <a class="btn" href="booking.html">Book Sea Trip</a>
+  </div>
 
-  <p class="note">We'll contact you shortly to confirm your booking via WhatsApp.</p>
+  <!-- Desert Safari -->
+  <div class="tour">
+    <h2>🏜️ Desert Safari</h2>
+    <img src="https://travel-egypt.github.io/hurghada-tours/safari1.jpg" alt="Safari Trip">
+    <p>Experience a thrilling 4x4 desert adventure, camel rides, Bedouin culture, and beautiful sunset views. A must for adventure lovers!</p>
+    <a class="btn" href="booking.html">Book Safari</a>
+  </div>
+
+  <!-- Luxor -->
+  <div class="tour">
+    <h2>🏛️ Luxor Tour</h2>
+    <img src="https://travel-egypt.github.io/hurghada-tours/luxor1.jpg" alt="Luxor Tour">
+    <p>Visit the stunning temples of Karnak and Luxor, explore the Valley of the Kings, and uncover ancient Egyptian wonders with our expert guides.</p>
+    <a class="btn" href="booking.html">Book Luxor Trip</a>
+  </div>
+
+  <!-- Cairo -->
+  <div class="tour">
+    <h2>🕌 Cairo Trip</h2>
+    <img src="https://travel-egypt.github.io/hurghada-tours/cairo1.jpg" alt="Cairo Tour">
+    <p>Discover the great pyramids of Giza, the Sphinx, and the Egyptian Museum in an exciting day tour to Cairo. Includes transportation and guide.</p>
+    <a class="btn" href="booking.html">Book Cairo Trip</a>
+  </div>
+
+  <!-- Aswan -->
+  <div class="tour">
+    <h2>🌄 Aswan Tour</h2>
+    <img src="https://travel-egypt.github.io/hurghada-tours/aswan1.jpg" alt="Aswan Tour">
+    <p>Explore Aswan's unique charm: the High Dam, Philae Temple, and Nubian culture. A peaceful trip full of history and scenic views.</p>
+    <a class="btn" href="booking.html">Book Aswan Trip</a>
+  </div>
+
 </section>
-
-<script>
-  function sendWhatsApp() {
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const trip = document.getElementById('trip').value;
-    const date = document.getElementById('date').value;
-    const notes = document.getElementById('notes').value;
-
-    const message = `📩 New Booking:\nName: ${name}\nPhone: ${phone}\nTrip: ${trip}\nDate: ${date}\nNotes: ${notes}`;
-    const url = `https://wa.me/00201020330241?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-    return true;
-  }
-</script>
 
 </body>
 </html>
