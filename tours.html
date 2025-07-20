@@ -3,38 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Browse all Hurghada tours including sea trips, desert safari, Luxor, Cairo, and Aswan with detailed videos and descriptions.">
-  <title>Our Tours | Hurghada Tours</title>
+  <meta name="description" content="Hurghada Tours - Sea Trips, Safari, Luxor, Cairo, and Aswan.">
+  <title>Tours | Hurghada Tours</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f5f5f5;
       color: #333;
     }
 
     header {
       background-color: #0077b6;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 30px 20px;
     }
 
     nav {
       background-color: #023e8a;
       text-align: center;
-      padding: 10px;
+      padding: 12px;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
     }
 
-    .tour-section {
+    .container {
       max-width: 1000px;
       margin: auto;
       padding: 40px 20px;
@@ -42,36 +42,36 @@
 
     .tour {
       margin-bottom: 50px;
-      border-bottom: 1px solid #ccc;
       padding-bottom: 30px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .tour img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 15px 0;
     }
 
     .tour h2 {
       color: #0077b6;
+      margin-bottom: 10px;
     }
 
     .tour p {
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.6;
-      color: #444;
     }
 
-    iframe {
-      width: 100%;
-      height: 315px;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
-
-    .shorts-link {
-      margin-top: 10px;
+    .btn {
       display: inline-block;
-      background-color: #e63946;
+      margin-top: 10px;
+      background-color: #00a8e8;
       color: white;
-      padding: 8px 12px;
-      border-radius: 5px;
+      padding: 10px 15px;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 6px;
     }
 
     footer {
@@ -86,8 +86,8 @@
 <body>
 
 <header>
-  <h1>Our Top Tours</h1>
-  <p>Explore the best experiences we offer in Hurghada and beyond</p>
+  <h1>Top Hurghada Tours</h1>
+  <p>Discover the best experiences in and around Hurghada</p>
 </header>
 
 <nav>
@@ -97,44 +97,52 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<div class="tour-section">
+<div class="container">
 
+  <!-- 🌊 Sea Trip (Video Removed) -->
   <div class="tour">
     <h2>🌊 Sea Trips</h2>
-    <p>Join unforgettable boat trips to Giftun Island, snorkeling adventures in crystal clear waters, and enjoy delicious meals onboard.</p>
-    <iframe src="https://www.youtube.com/embed/6k0z5L9VPnY" title="Hurghada Boat Trip" allowfullscreen></iframe>
-    <br>
-    <a class="shorts-link" href="https://www.youtube.com/shorts/2CcTwuIaWWQ" target="_blank">🎥 Extra Sea Trip Video</a>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Red_Sea_boat_trip.jpg" alt="Sea Trip">
+    <p>Enjoy boat trips to Giftun Island, snorkeling in crystal-clear waters, sunbathing on the deck, and delicious lunch on board.</p>
+    <a class="btn" href="booking.html">Book Now</a>
   </div>
 
+  <!-- 🏜️ Safari -->
   <div class="tour">
     <h2>🏜️ Desert Safari</h2>
-    <p>Experience thrilling desert adventures including quad biking, Bedouin tea, camel rides, and an unforgettable sunset.</p>
-    <iframe src="https://www.youtube.com/embed/CU4z8Rt0Z7g" title="Hurghada Desert Safari" allowfullscreen></iframe>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Quad_Bike_Safari_Hurghada.jpg" alt="Safari">
+    <p>Adventure into the desert with quad biking, Bedouin village visit, camel riding, and a beautiful desert sunset.</p>
+    <a class="btn" href="booking.html">Book Now</a>
   </div>
 
+  <!-- 🏛️ Luxor -->
   <div class="tour">
-    <h2>🏛️ Luxor</h2>
-    <p>Visit the Karnak and Luxor Temples, Valley of the Kings, and experience Egypt's ancient heritage with expert guides.</p>
-    <iframe src="https://www.youtube.com/embed/9NLh9_xkvHE" title="Luxor Tour" allowfullscreen></iframe>
+    <h2>🏛️ Luxor Day Trip</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Karnak_Temple_%28LUXOR%29.jpg" alt="Luxor">
+    <p>Visit Karnak Temple, Valley of the Kings, Luxor Temple, and enjoy a full-day guided historical adventure.</p>
+    <a class="btn" href="booking.html">Book Now</a>
   </div>
 
+  <!-- 🕌 Cairo -->
   <div class="tour">
-    <h2>🕌 Cairo</h2>
-    <p>Explore the Great Pyramids, Sphinx, and Egyptian Museum in a full-day tour with transportation and lunch included.</p>
-    <iframe src="https://www.youtube.com/embed/5sEQ69C6UQE" title="Cairo Tour" allowfullscreen></iframe>
+    <h2>🕌 Cairo Tour</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg" alt="Cairo">
+    <p>Explore the Great Pyramids of Giza, Sphinx, Egyptian Museum, and the bustling Khan El Khalili market.</p>
+    <a class="btn" href="booking.html">Book Now</a>
   </div>
 
+  <!-- 🌄 Aswan -->
   <div class="tour">
-    <h2>🌄 Aswan</h2>
-    <p>Enjoy peaceful views along the Nile, visit Philae Temple, and explore local markets and the Aswan High Dam.</p>
-    <iframe src="https://www.youtube.com/embed/2bEJ0M88nG4" title="Aswan Tour" allowfullscreen></iframe>
+    <h2>🌄 Aswan Trip</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Philae_Temple.jpg" alt="Aswan">
+    <p>Enjoy a tour of Philae Temple, the High Dam, and Aswan's relaxing atmosphere along the Nile River.</p>
+    <a class="btn" href="booking.html">Book Now</a>
   </div>
 
 </div>
 
 <footer>
-  &copy; 2025 Hurghada Tours | All Rights Reserved
+  &copy; 2025 Hurghada Tours. All rights reserved.
 </footer>
 
 </body>
