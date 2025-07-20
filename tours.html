@@ -1,87 +1,104 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hurghada Tours - Trips & Videos</title>
+  <title>Hurghada Tours</title>
   <style>
-    body { font-family: 'Arial', sans-serif; background:#f2f5f9; margin:0; padding:0; direction:ltr; }
-    header { background:#0077b6; color:white; text-align:center; padding:30px; }
-    .section { padding:30px; max-width:1000px; margin:auto; }
-    .tour { background:white; margin-bottom:40px; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
-    .tour h2 { color:#0077b6; }
-    .tour p { color:#333; line-height:1.8; }
-    .tour img { width:100%; border-radius:10px; margin-top:10px; }
-    .videos { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:15px; margin-top:20px; }
-    iframe { width:100%; height:200px; border-radius:8px; border:none; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    nav {
+      background-color: #023e8a;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    h2 {
+      color: #0077b6;
+      margin-top: 40px;
+    }
+    .tour {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+    p {
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Hurghada Tours – Best Travel Experiences</h1>
+  <h1>Hurghada Tours</h1>
 </header>
 
-<section class="section">
+<nav>
+  <a href="index.html">Home</a>
+  <a href="tours.html">Tours</a>
+  <a href="booking.html">Booking</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
 
   <div class="tour">
     <h2>🌊 Sea Trips</h2>
-    <p>Enjoy the Red Sea with snorkeling, Giftun Island, and lunch on the boat.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Red_Sea_boat_trip.jpg" alt="Sea Trips">
-    <div class="videos">
-      <iframe src="https://www.youtube.com/embed/p6Yh66S6cTs" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/FOUwQkFzRWw" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/6dUE8aArsr4" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/6UoYX78LqMo" allowfullscreen></iframe>
-    </div>
+    <p>Enjoy an unforgettable sea adventure to Giftun Island, snorkeling in crystal-clear waters, and lunch on board.</p>
+    <iframe src="https://www.youtube.com/embed/TzO7CHvqDE4" title="Sea Trip Hurghada"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
   </div>
 
   <div class="tour">
-    <h2>🏜️ Desert Safari</h2>
-    <p>Exciting desert safari with quad biking, camel ride, and Bedouin camp experience.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Quad_Bike_Safari_Hurghada.jpg" alt="Desert Safari">
-    <div class="videos">
-      <iframe src="https://www.youtube.com/embed/3_o5B94a9fE" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/4A-ol9MQWhE" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/NzUQShm-3tU" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/vVYceRGY0Zw" allowfullscreen></iframe>
-    </div>
+    <h2>🏜️ Safari Tours</h2>
+    <p>Experience the desert life with quad biking, camel riding, and Bedouin-style dinner under the stars.</p>
   </div>
 
   <div class="tour">
-    <h2>🏛️ Luxor Trip</h2>
-    <p>Explore Karnak Temple, Luxor Temple, Valley of the Kings, and sail the Nile River.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Karnak_Temple_%28LUXOR%29.jpg" alt="Luxor Trip">
-    <div class="videos">
-      <iframe src="https://www.youtube.com/embed/WdWeAF3JJD4" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/alX3O4aiNJg" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/l5X5WPKm5gQ" allowfullscreen></iframe>
-    </div>
+    <h2>🏛️ Luxor</h2>
+    <p>Visit the Karnak Temple, Valley of the Kings, and enjoy a full historical tour in the ancient city of Luxor.</p>
   </div>
 
   <div class="tour">
-    <h2>🕌 Cairo Trip</h2>
-    <p>Visit the Pyramids, Sphinx, Egyptian Museum, and enjoy a walk in Khan El-Khalili bazaar.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg" alt="Cairo Trip">
-    <div class="videos">
-      <iframe src="https://www.youtube.com/embed/XjpRoYEV-sA" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/gZjKCWGZYlQ" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/HSuEGgR_iPU" allowfullscreen></iframe>
-    </div>
+    <h2>🕌 Cairo</h2>
+    <p>Explore the great Pyramids of Giza, the Sphinx, and the Egyptian Museum in a full-day trip to Cairo.</p>
   </div>
 
   <div class="tour">
-    <h2>🌄 Aswan Trip</h2>
-    <p>Visit Philae Temple, the High Dam, Nubian village and enjoy amazing Nile scenery.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Philae_Temple.jpg" alt="Aswan Trip">
-    <div class="videos">
-      <iframe src="https://www.youtube.com/embed/0L3PeJhnJL4" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/bn6AUkIxL4k" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/3zjs4DzKy64" allowfullscreen></iframe>
-    </div>
+    <h2>🌄 Aswan</h2>
+    <p>Relax in the beauty of the Nile in Aswan, visit the High Dam, Philae Temple, and traditional markets.</p>
   </div>
 
-</section>
+</div>
 
 </body>
 </html>
