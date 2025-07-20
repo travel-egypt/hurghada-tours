@@ -1,150 +1,98 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>نموذج الحجز | Hurghada Tours</title>
-  <meta name="description" content="احجز رحلتك في الغردقة بسهولة عبر نموذج حجز احترافي يدعم إرسال الطلب عبر الإيميل والواتساب.">
-  <link rel="canonical" href="https://travel-egypt.github.io/hurghada-tours/booking.html" />
-  <meta name="robots" content="index, follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hurghada Tours - Booking</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
       margin: 0;
-      background: #f0f8ff;
-      direction: rtl;
+      padding: 0;
     }
-    header, footer {
+    header {
       background-color: #0077b6;
       color: white;
-      text-align: center;
       padding: 20px;
-    }
-    nav {
-      background-color: #023e8a;
-      padding: 10px;
       text-align: center;
     }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      max-width: 700px;
-      background: white;
-      margin: 40px auto;
-      padding: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    .section {
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
       border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    h1 {
+    h2 {
       color: #023e8a;
-      text-align: center;
-      margin-bottom: 30px;
     }
-    label {
-      display: block;
-      margin-top: 15px;
-      color: #023e8a;
-      font-weight: bold;
-    }
-    input, select, textarea {
+    form input, form select, form textarea {
       width: 100%;
       padding: 12px;
-      margin-top: 5px;
+      margin-top: 10px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      font-size: 14px;
     }
-    textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-    button {
-      background-color: #00a8e8;
+    form button {
+      background-color: #0077b6;
       color: white;
+      padding: 12px 20px;
       border: none;
-      padding: 14px 20px;
-      font-size: 16px;
-      font-weight: bold;
       border-radius: 6px;
-      margin-top: 20px;
       cursor: pointer;
-      width: 100%;
-      transition: background 0.3s ease;
+      font-size: 16px;
     }
-    button:hover {
-      background-color: #0096d6;
+    form button:hover {
+      background-color: #005f8e;
     }
-    .whatsapp-hint {
-      margin-top: 20px;
-      text-align: center;
+    .note {
       font-size: 14px;
-      color: #00695c;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h2>حجز الرحلات</h2>
+  <h1>Tour Booking Form</h1>
 </header>
 
-<nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="tours.html">الرحلات</a>
-  <a href="contact.html">تواصل معنا</a>
-</nav>
+<section class="section">
+  <h2>Reserve Your Spot</h2>
 
-<section>
-  <h1>نموذج الحجز</h1>
   <form action="https://formsubmit.co/m47199563@gmail.com" method="POST" onsubmit="return sendWhatsApp();">
-    <label for="name">👤 الاسم الكامل</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="phone">📱 رقم الهاتف</label>
-    <input type="tel" id="phone" name="phone" required>
-
-    <label for="trip">🧭 نوع الرحلة</label>
-    <select id="trip" name="trip">
-      <option value="رحلة بحرية">رحلة بحرية</option>
-      <option value="رحلة سفاري">رحلة سفاري</option>
-      <option value="زيارة القاهرة">زيارة القاهرة</option>
-      <option value="زيارة الأقصر">زيارة الأقصر</option>
-      <option value="زيارة أسوان">زيارة أسوان</option>
+    <input type="text" name="name" id="name" placeholder="Full Name" required />
+    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required />
+    <select name="trip" id="trip" required>
+      <option value="">Select a Trip</option>
+      <option value="Sea Trip">Sea Trip</option>
+      <option value="Desert Safari">Desert Safari</option>
+      <option value="Luxor Tour">Luxor Tour</option>
+      <option value="Cairo Tour">Cairo Tour</option>
+      <option value="Aswan Tour">Aswan Tour</option>
     </select>
-
-    <label for="date">📅 تاريخ الرحلة</label>
-    <input type="date" id="date" name="date" required>
-
-    <label for="notes">📝 ملاحظات إضافية</label>
-    <textarea id="notes" name="notes" placeholder="عدد الأشخاص، الفندق، الطلبات الخاصة..."></textarea>
-
+    <input type="date" name="date" id="date" required />
+    <textarea name="notes" id="notes" placeholder="Additional notes (optional)"></textarea>
     <input type="hidden" name="_captcha" value="false">
-    <button type="submit">إرسال الحجز</button>
+    <button type="submit">Submit Booking</button>
   </form>
 
-  <div class="whatsapp-hint">
-    📩 سيتم أيضًا فتح الواتساب لتأكيد الحجز تلقائيًا.
-  </div>
+  <p class="note">We'll contact you shortly to confirm your booking via WhatsApp.</p>
 </section>
-
-<footer>
-  <p>&copy; 2025 جميع الحقوق محفوظة | Hurghada Tours</p>
-</footer>
 
 <script>
   function sendWhatsApp() {
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const trip = document.getElementById("trip").value;
-    const date = document.getElementById("date").value;
-    const notes = document.getElementById("notes").value;
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const trip = document.getElementById('trip').value;
+    const date = document.getElementById('date').value;
+    const notes = document.getElementById('notes').value;
 
-    const msg = `🚨 حجز جديد:\n👤 الاسم: ${name}\n📱 الهاتف: ${phone}\n🧭 الرحلة: ${trip}\n📅 التاريخ: ${date}\n📝 ملاحظات: ${notes}`;
-    const url = `https://wa.me/00201020330241?text=${encodeURIComponent(msg)}`;
+    const message = `📩 New Booking:\nName: ${name}\nPhone: ${phone}\nTrip: ${trip}\nDate: ${date}\nNotes: ${notes}`;
+    const url = `https://wa.me/00201020330241?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
     return true;
   }
