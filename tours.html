@@ -2,84 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hurghada Tours - Video Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hurghada Tours – Explore Egypt</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #0097b2;
+      color: white;
       padding: 20px;
-      background: #f4f4f4;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 40px;
       color: #333;
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
     .section {
-      margin-bottom: 50px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
-    .video-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
     }
     .video-box {
-      background: #fff;
-      border: 1px solid #ddd;
+      background: white;
       padding: 15px;
-      width: 320px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .video-box iframe {
+    iframe {
       width: 100%;
-      height: 180px;
+      height: 200px;
+      border: none;
     }
     .description {
       margin-top: 10px;
-      font-size: 14px;
+      color: #444;
+      font-size: 15px;
     }
     .book-btn {
       display: inline-block;
       margin-top: 10px;
-      padding: 8px 15px;
-      background: #ff6600;
+      padding: 8px 14px;
+      background-color: #0097b2;
       color: white;
       text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
+      border-radius: 5px;
     }
     .book-btn:hover {
-      background: #e65c00;
+      background-color: #00788f;
     }
   </style>
 </head>
 <body>
 
-  <h1>Hurghada Tours</h1>
+  <header>
+    <h1>Hurghada Tours</h1>
+    <p>Enjoy the best tours across Egypt – Cairo, Luxor, Aswan and more!</p>
+  </header>
 
   <!-- Cairo Section -->
   <div class="section">
     <h2>Cairo Tours</h2>
-    <div class="video-container">
+    <div class="video-grid">
 
-      <!-- Video 1 -->
+      <!-- Repeat this block for each video -->
       <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/QZJ9n5h4uAo" frameborder="0" allowfullscreen></iframe>
-        <div class="description">Discover the Great Pyramids of Giza and the Sphinx in this full-day Cairo adventure.</div>
+        <iframe src="https://www.youtube.com/embed/QZJ9n5h4uAo" allowfullscreen></iframe>
+        <div class="description">Discover the Pyramids of Giza and the Great Sphinx on a magical day tour in Cairo.</div>
         <a class="book-btn" href="booking.html">Book Now</a>
       </div>
 
-      <!-- Video 2 -->
       <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/bVOnQI6sFEQ" frameborder="0" allowfullscreen></iframe>
-        <div class="description">Explore ancient artifacts at the Egyptian Museum and stroll through Old Cairo's charm.</div>
+        <iframe src="https://www.youtube.com/embed/bVOnQI6sFEQ" allowfullscreen></iframe>
+        <div class="description">Explore ancient Egyptian history at the world-famous Egyptian Museum.</div>
         <a class="book-btn" href="booking.html">Book Now</a>
       </div>
 
-      <!-- ... Add remaining 8 videos for Cairo (نفس الشكل) -->
-      <!-- يمكنك طلب باقي العشرة لاحقًا أو أضيفهم مباشرة إذا رغبت -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/gfGOP_Z6vbE" allowfullscreen></iframe>
+        <div class="description">Visit Islamic Cairo and enjoy the view from the Citadel of Salah El-Din.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/JrU8RDRn6NM" allowfullscreen></iframe>
+        <div class="description">Marvel at the ancient Islamic architecture and local bazaars in Cairo.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/8pOgHELghvc" allowfullscreen></iframe>
+        <div class="description">Experience modern Cairo and the Nile riverfront in a magical sunset cruise.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/RQ-EM2D4Wso" allowfullscreen></iframe>
+        <div class="description">Discover the Islamic treasures of old mosques and culture in Cairo streets.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/UWhQaTO7miQ" allowfullscreen></iframe>
+        <div class="description">Join us on a night tour of Cairo, the city that never sleeps.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/nrxDO8-jpSk" allowfullscreen></iframe>
+        <div class="description">Explore the National Museum of Egyptian Civilization with our expert guides.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/nMO1YVj98dA" allowfullscreen></iframe>
+        <div class="description">Roam the bustling Khan El Khalili bazaar and enjoy local shopping.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/TVi7u5KSIG8" allowfullscreen></iframe>
+        <div class="description">From Coptic Cairo to downtown vibes — get the full Cairo experience.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
 
     </div>
   </div>
@@ -87,30 +140,61 @@
   <!-- Luxor & Aswan Section -->
   <div class="section">
     <h2>Luxor & Aswan Tours</h2>
-    <div class="video-container">
+    <div class="video-grid">
 
-      <!-- Video 1 -->
       <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/qQ21O8-TmWs" frameborder="0" allowfullscreen></iframe>
-        <div class="description">Walk through the majestic Karnak Temple and witness the ancient glory of Luxor.</div>
+        <iframe src="https://www.youtube.com/embed/qQ21O8-TmWs" allowfullscreen></iframe>
+        <div class="description">Explore the Valley of the Kings and witness ancient tombs in Luxor.</div>
         <a class="book-btn" href="booking.html">Book Now</a>
       </div>
 
-      <!-- Video 2 -->
       <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/Rv0hWCwj2YU" frameborder="0" allowfullscreen></iframe>
-        <div class="description">Sail along the Nile and explore the wonders of Aswan and Philae Temple.</div>
+        <iframe src="https://www.youtube.com/embed/Rv0hWCwj2YU" allowfullscreen></iframe>
+        <div class="description">Sail through the Nile and experience the serenity of Aswan’s beauty.</div>
         <a class="book-btn" href="booking.html">Book Now</a>
       </div>
 
-      <!-- Video 3 -->
       <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/o6i9GgbKzgc" frameborder="0" allowfullscreen></iframe>
-        <div class="description">Step into history with a guided tour of the Valley of the Kings and Queen Hatshepsut Temple.</div>
+        <iframe src="https://www.youtube.com/embed/o6i9GgbKzgc" allowfullscreen></iframe>
+        <div class="description">Visit Karnak Temple Complex and feel the ancient power of Thebes.</div>
         <a class="book-btn" href="booking.html">Book Now</a>
       </div>
 
-      <!-- ... Add remaining 6 videos for Luxor & Aswan -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/XyFQH1ABv2M" allowfullscreen></iframe>
+        <div class="description">Unveil the secrets of the Luxor Temple under golden evening lights.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/FHNsWB968Ls" allowfullscreen></iframe>
+        <div class="description">Explore the colossal statues of Memnon and the history behind them.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/UZe9HU33GMk" allowfullscreen></iframe>
+        <div class="description">Relax on a Nile cruise between Luxor and Aswan with breathtaking views.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/lBdnb66vi0k" allowfullscreen></iframe>
+        <div class="description">Wander through the temples of Edfu and Kom Ombo with expert guides.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/JMs3ACLxiA8" allowfullscreen></iframe>
+        <div class="description">Discover Abu Simbel Temple, carved into the mountainside in southern Egypt.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/TKMe4Yg1jKg" allowfullscreen></iframe>
+        <div class="description">Explore Nubian culture in Aswan’s colorful villages and spice markets.</div>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
 
     </div>
   </div>
