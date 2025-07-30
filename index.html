@@ -5,13 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Welcome to Hurghada Tours</title>
   <style>
-    * {
+    html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
       height: 100%;
       overflow: hidden;
       font-family: Arial, sans-serif;
@@ -20,52 +16,72 @@
     .video-background {
       position: fixed;
       top: 0; left: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
+      width: 100vw;
+      height: 100vh;
       z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-background iframe {
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
     }
 
     .overlay {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.4);
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.4); /* Optional dark overlay */
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 1;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+    }
+
+    .overlay h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
     }
 
     .enter-btn {
-      background-color: #ffcc00;
-      border: none;
-      color: #000;
-      font-size: 24px;
       padding: 15px 30px;
+      font-size: 18px;
+      background-color: #00bcd4;
+      color: white;
+      border: none;
       border-radius: 5px;
       text-decoration: none;
-      cursor: pointer;
-      transition: background 0.3s ease;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
     .enter-btn:hover {
-      background-color: #ff9900;
+      background-color: #0097a7;
     }
   </style>
 </head>
 <body>
 
-  <!-- فيديو اليوتيوب كخلفية -->
+  <!-- 🔊 Background Video -->
   <div class="video-background">
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/nfgq0D-gCA4?autoplay=1&mute=1&controls=0&loop=1&playlist=nfgq0D-gCA4&modestbranding=1&showinfo=0&rel=0" 
-      frameborder="0" 
-      allow="autoplay; encrypted-media" 
-      allowfullscreen>
-    </iframe>
+    <iframe
+      src="https://www.youtube.com/embed/nfgq0D-gCA4?autoplay=1&mute=0&controls=0&loop=1&playlist=nfgq0D-gCA4&modestbranding=1&showinfo=0&rel=0"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
   </div>
 
-  <!-- زر الدخول -->
+  <!-- Overlay Content -->
   <div class="overlay">
-    <a class="enter-btn" href="cairo-tours.html">Enter Site</a>
+    <h1>Welcome to Hurghada Tours</h1>
+    <a href="cairo-tours.html" class="enter-btn">Enter Site</a>
   </div>
 
 </body>
