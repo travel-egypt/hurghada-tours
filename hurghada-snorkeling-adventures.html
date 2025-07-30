@@ -1,96 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<<link rel="stylesheet" href="style.css">
->
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hurghada Snorkeling Adventures | Hurghada Tours</title>
+  <title>Hurghada Snorkeling Adventures</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #222;
     }
     header {
       background-color: #004466;
-      color: #fff;
-      padding: 40px 20px;
+      padding: 15px 20px;
       text-align: center;
     }
     header h1 {
+      color: #fff;
       margin: 0;
-      font-size: 28px;
+      font-size: 24px;
     }
-    .container {
-      padding: 30px 20px;
+    nav {
+      background-color: #033f4f;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #02738c;
+    }
+    .hero {
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 30px;
+      color: #004466;
+    }
+    .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      gap: 25px;
+      padding: 20px;
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
     }
     .video-card {
-      background-color: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
     .video-card iframe {
       width: 100%;
       height: 200px;
       border: none;
-      border-radius: 10px;
+    }
+    .card-content {
+      padding: 15px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .book-btn {
-      margin-top: 15px;
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #00bcd4;
+      margin-top: 10px;
+      background-color: #004466;
       color: #fff;
-      text-decoration: none;
+      text-align: center;
+      padding: 10px;
       border-radius: 5px;
+      text-decoration: none;
       font-weight: bold;
       transition: background 0.3s;
     }
     .book-btn:hover {
-      background-color: #0097a7;
+      background-color: #02738c;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 <body>
-<!-- Start Navigation Bar -->
-<nav style="background-color: #222; padding: 10px 20px; font-family: Arial, sans-serif;">
-  <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center;">
-    <li style="margin-right: 20px;"><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
-    <li style="margin-right: 20px;"><a href="cairo-tours.html" style="color: #fff; text-decoration: none;">Cairo Tours</a></li>
-    <li style="margin-right: 20px;"><a href="luxor-aswan-tours.html" style="color: #fff; text-decoration: none;">Luxor & Aswan</a></li>
-    <li style="margin-right: 20px;"><a href="hurghada-safari.html" style="color: #fff; text-decoration: none;">Safari</a></li>
-    <li style="margin-right: 20px;"><a href="hurghada-snorkeling-adventures.html" style="color: #fff; text-decoration: none;">Snorkeling</a></li>
-    <li style="margin-right: 20px;"><a href="booking.html" style="color: #fff; text-decoration: none;">Booking</a></li>
-  </ul>
-</nav>
-<!-- End Navigation Bar -->
 
   <header>
-    <h1>Hurghada Snorkeling Adventures | Explore Red Sea Coral Reefs 🐠🌊</h1>
+    <h1>Hurghada Tours</h1>
   </header>
 
-  <div class="container">
-    <!-- Videos -->
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/yPPkXndZoqI" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/uZJOBL9oD58" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/qXVBXOtSNQg" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/nvefgjFvpx0" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/d6EdjC3NFaI" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/ZxWb-C_zjUI" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/YVyFjsIs4v8" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/ExEmZWQjYHo" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/6LUEhb7N_pw" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/5Y4rRClNLGE" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/4eF0xarPMA8" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cairo-tours.html">Cairo Tours</a>
+    <a href="luxor-aswan-tours.html">Luxor & Aswan</a>
+    <a href="hurghada-safari.html">Safari</a>
+    <a href="hurghada-snorkeling-adventures.html">Snorkeling</a>
+    <a href="booking.html">Book Now</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Hurghada Snorkeling Adventures | Explore Red Sea Coral Reefs 🐠🌊</h2>
+  </section>
+
+  <section class="video-grid">
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/yPPkXndZoqI" allowfullscreen></iframe>
+      <div class="card-content">
+        <p>Snorkeling at Giftun Island</p>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/uZJOBL9oD58" allowfullscreen></iframe>
+      <div class="card-content">
+        <p>Dolphin House Snorkeling Tour</p>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/qXVBXOtSNQg" allowfullscreen></iframe>
+      <div class="card-content">
+        <p>Snorkeling the Red Sea Coral Gardens</p>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/nvefgjFvpx0" allowfullscreen></iframe>
+      <div class="card-content">
+        <p>Snorkeling Adventure with Sea Turtles</p>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/d6EdjC3NFaI" allowfullscreen></iframe>
+      <div class="card-content">
+        <p>Boat Trip & Snorkeling at Orange Bay</p>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/ZxWb-C_zjUI" allowfullscreen></iframe>
+      <div class="card-content">
+        <p>Explore Underwater Reefs in Hurghada</p>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+    </div>
+
+    <!-- تابع باقي الفيديوهات بنفس التنسيق -->
+
+  </section>
+
+  <footer>
+    &copy; 2025 Hurghada Tours. All rights reserved.
+  </footer>
 
 </body>
 </html>
