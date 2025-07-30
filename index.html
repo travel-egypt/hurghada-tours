@@ -3,109 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Explore the best tours in Hurghada: sea trips, safari adventures, and excursions to Luxor, Cairo, and Aswan. Book now!">
   <title>Hurghada Tours</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
     }
-
-    header {
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Red_Sea_boat_trip.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
     }
-
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
-
-    header p {
-      font-size: 20px;
-      max-width: 600px;
-      margin: auto;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-    }
-
-    nav {
-      background-color: #0077b6;
-      padding: 15px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .section h2 {
-      color: #0077b6;
-      margin-bottom: 20px;
-    }
-
-    .section p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    footer {
-      background-color: #023e8a;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       color: white;
       text-align: center;
       padding: 20px;
+    }
+    .overlay h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .enter-button {
+      background: #ffcc00;
+      color: #000;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .enter-button:hover {
+      background: #e6b800;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Welcome to Hurghada Tours</h1>
-  <p>Discover amazing trips in the Red Sea, desert safaris, and cultural tours to Egypt's most iconic destinations.</p>
-</header>
+  <!-- YouTube video as fullscreen background using iframe -->
+  <iframe class="video-bg"
+    src="https://www.youtube.com/embed/nfgq0D-gCA4?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&playlist=nfgq0D-gCA4&modestbranding=1"
+    frameborder="0"
+    allow="autoplay; fullscreen"
+    allowfullscreen>
+  </iframe>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="tours.html">Tours</a>
-  <a href="booking.html">Booking</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<section class="section">
-  <h2>Why Choose Us?</h2>
-  <p>
-    We offer unforgettable experiences in Hurghada and beyond. Whether you're looking for relaxation, adventure, or history — our tours cover it all. From boat trips to the magical Giftun Island to exploring the ancient wonders of Luxor and Cairo, we provide high-quality service and trusted guides.
-  </p>
-</section>
-
-<section class="section">
-  <h2>Popular Destinations</h2>
-  <p>
-    🌊 Sea Trips – 🏜️ Desert Safari – 🏛️ Luxor – 🕌 Cairo – 🌄 Aswan
-  </p>
-</section>
-
-<footer>
-  &copy; 2025 Hurghada Tours | Designed with care in Egypt
-</footer>
+  <div class="overlay">
+    <h1>Welcome to Hurghada Tours</h1>
+    <button class="enter-button" onclick="window.location.href='cairo-tours.html'">Enter Site</button>
+  </div>
 
 </body>
 </html>
