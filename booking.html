@@ -3,52 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hurghada Tours - Booking</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Book Your Tour | Hurghada Tours</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navigation Bar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Hurghada Tours</div>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Hurghada Tours</a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
         <li><a href="cairo-tours.html">Cairo Tours</a></li>
         <li><a href="luxor-aswan-tours.html">Luxor & Aswan</a></li>
         <li><a href="hurghada-safari.html">Hurghada Safari</a></li>
         <li><a href="hurghada-snorkeling-adventures.html">Snorkeling</a></li>
-        <li><a class="active" href="booking.html">Booking</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <!-- Booking Section -->
   <section class="booking-section">
     <div class="container">
-      <h2>Book Your Adventure</h2>
-      <p>Fill in the form below and we’ll get back to you as soon as possible!</p>
-      <form action="https://formspree.io/f/your-code-here" method="POST" class="booking-form">
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="email" name="email" placeholder="Email Address" required />
-        <input type="tel" name="phone" placeholder="Phone Number" required />
-        <select name="tour" required>
-          <option value="">Select a Tour</option>
-          <option value="Cairo Tour">Cairo Tour</option>
-          <option value="Luxor & Aswan Tour">Luxor & Aswan Tour</option>
-          <option value="Hurghada Safari">Hurghada Safari</option>
-          <option value="Snorkeling Adventure">Snorkeling Adventure</option>
-        </select>
-        <textarea name="message" rows="4" placeholder="Additional Message (optional)"></textarea>
-        <button type="submit">Send Booking Request</button>
+      <h2>Book Your Tour</h2>
+      <form class="booking-form" onsubmit="return handleBooking(event)">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="tour">Select Tour</label>
+          <select id="tour" name="tour" required>
+            <option value="" disabled selected>Choose a tour</option>
+            <option value="Cairo">Cairo Tours</option>
+            <option value="Luxor & Aswan">Luxor & Aswan</option>
+            <option value="Hurghada Safari">Hurghada Safari</option>
+            <option value="Snorkeling">Snorkeling Adventures</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Date of the Tour</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="people">Number of People</label>
+          <input type="number" id="people" name="people" min="1" required />
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Preferred Contact Method</label>
+          <select id="contact" name="contact">
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Email">Email</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Any special requests..."></textarea>
+        </div>
+
+        <button type="submit" class="btn">Book Now</button>
       </form>
     </div>
   </section>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/201020330241" class="whatsapp-button" target="_blank">
-    💬 Book on WhatsApp
-  </a>
-
+  <script>
+    function handleBooking(e) {
+      e.preventDefault();
+      alert("Thank you! Your booking request has been received. We’ll contact you shortly.");
+      return false;
+    }
+  </script>
 </body>
 </html>
