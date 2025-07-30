@@ -1,98 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<<link rel="stylesheet" href="style.css">
->
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hurghada Safari Tours | Hurghada Tours</title>
+  <title>Hurghada Safari</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #222;
     }
     header {
-      background-color: #222;
-      color: #fff;
-      padding: 40px 20px;
+      background-color: #004466;
+      padding: 15px 20px;
       text-align: center;
     }
     header h1 {
+      color: #fff;
       margin: 0;
-      font-size: 28px;
+      font-size: 24px;
     }
-    .container {
-      padding: 30px 20px;
+    nav {
+      background-color: #033f4f;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #02738c;
+    }
+    .hero {
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 30px;
+      color: #004466;
+    }
+    .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      gap: 25px;
+      padding: 20px;
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
     }
     .video-card {
-      background-color: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
     .video-card iframe {
       width: 100%;
       height: 200px;
       border: none;
-      border-radius: 10px;
+    }
+    .card-content {
+      padding: 15px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .book-btn {
-      margin-top: 15px;
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ff9900;
+      margin-top: 10px;
+      background-color: #004466;
       color: #fff;
-      text-decoration: none;
+      text-align: center;
+      padding: 10px;
       border-radius: 5px;
+      text-decoration: none;
       font-weight: bold;
       transition: background 0.3s;
     }
     .book-btn:hover {
-      background-color: #e68a00;
+      background-color: #02738c;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 <body>
-<!-- Start Navigation Bar -->
-<nav style="background-color: #222; padding: 10px 20px; font-family: Arial, sans-serif;">
-  <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center;">
-    <li style="margin-right: 20px;"><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
-    <li style="margin-right: 20px;"><a href="cairo-tours.html" style="color: #fff; text-decoration: none;">Cairo Tours</a></li>
-    <li style="margin-right: 20px;"><a href="luxor-aswan-tours.html" style="color: #fff; text-decoration: none;">Luxor & Aswan</a></li>
-    <li style="margin-right: 20px;"><a href="hurghada-safari.html" style="color: #fff; text-decoration: none;">Safari</a></li>
-    <li style="margin-right: 20px;"><a href="hurghada-snorkeling-adventures.html" style="color: #fff; text-decoration: none;">Snorkeling</a></li>
-    <li style="margin-right: 20px;"><a href="booking.html" style="color: #fff; text-decoration: none;">Booking</a></li>
-  </ul>
-</nav>
-<!-- End Navigation Bar -->
 
   <header>
-    <h1>Ultimate Hurghada Safari Experience 🌵🔥</h1>
+    <h1>Hurghada Tours</h1>
   </header>
 
-  <div class="container">
-    <!-- Start of Videos -->
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/E6b8AwJeYfw" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/5N2dSFzzT3U" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/eCMVcUcIE8w" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/rO-8tmyjmv0" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/cU__a82bLy4" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/gRgF_35LGTw" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/oucMpQy-VYc" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/dgq0DeohLjc" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/_Oajo7lh798" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/41WDPeC03ow" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/iKqAlE_oFPM" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <div class="video-card"><iframe src="https://www.youtube.com/embed/jnz1yxgalpA" allowfullscreen></iframe><a href="booking.html" class="book-btn">Book Now</a></div>
-    <!-- End of Videos -->
-  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cairo-tours.html">Cairo Tours</a>
+    <a href="luxor-aswan-tours.html">Luxor & Aswan</a>
+    <a href="hurghada-safari.html">Safari</a>
+    <a href="hurghada-snorkeling-adventures.html">Snorkeling</a>
+    <a href="booking.html">Book Now</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Ultimate Hurghada Safari Experience 🌵🔥</h2>
+  </section>
+
+  <section class="video-grid">
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/E6b8AwJeYfw" allowfullscreen></iframe>
+      <div class="card-content">
+        <p>Thrilling Jeep Safari Adventure in the Desert</p>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/5N2dSFzzT3U" allowfullscreen></iframe>
+      <div class="card-content">
+        <p>Bedouin Village Tour & Camel Ride</p>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/eCMVcUcIE8w" allowfullscreen></iframe>
+      <div class="card-content">
+        <p>Desert Safari Sunset Experience</p>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/rO-8tmyjmv0" allowfullscreen></iframe>
+      <div class="card-content">
+        <p>Quad Biking Through the Sahara</p>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/cU__a82bLy4" allowfullscreen></iframe>
+      <div class="card-content">
+        <p>Adventure Trail on 4x4 Safari</p>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/gRgF_35LGTw" allowfullscreen></iframe>
+      <div class="card-content">
+        <p>Explore Desert Wildlife</p>
+        <a class="book-btn" href="booking.html">Book Now</a>
+      </div>
+    </div>
+
+    <!-- تابع باقي الفيديوهات بنفس التنسيق -->
+
+  </section>
+
+  <footer>
+    &copy; 2025 Hurghada Tours. All rights reserved.
+  </footer>
 
 </body>
 </html>
