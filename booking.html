@@ -4,111 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hurghada Tours - Booking</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #0077b6;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .section {
-      padding: 40px 20px;
-      max-width: 600px;
-      margin: auto;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #023e8a;
-    }
-    form input, form select, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    form button {
-      background-color: #0077b6;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    form button:hover {
-      background-color: #005f8e;
-    }
-    .note {
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Start Navigation Bar -->
-<nav style="background-color: #222; padding: 10px 20px; font-family: Arial, sans-serif;">
-  <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center;">
-    <li style="margin-right: 20px;"><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
-    <li style="margin-right: 20px;"><a href="cairo-tours.html" style="color: #fff; text-decoration: none;">Cairo Tours</a></li>
-    <li style="margin-right: 20px;"><a href="luxor-aswan-tours.html" style="color: #fff; text-decoration: none;">Luxor & Aswan</a></li>
-    <li style="margin-right: 20px;"><a href="hurghada-safari.html" style="color: #fff; text-decoration: none;">Safari</a></li>
-    <li style="margin-right: 20px;"><a href="hurghada-snorkeling-adventures.html" style="color: #fff; text-decoration: none;">Snorkeling</a></li>
-    <li style="margin-right: 20px;"><a href="booking.html" style="color: #fff; text-decoration: none;">Booking</a></li>
-  </ul>
-</nav>
-<!-- End Navigation Bar -->
 
-<header>
-  <h1>Tour Booking Form</h1>
-</header>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Hurghada Tours</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cairo-tours.html">Cairo Tours</a></li>
+        <li><a href="luxor-aswan-tours.html">Luxor & Aswan</a></li>
+        <li><a href="hurghada-safari.html">Hurghada Safari</a></li>
+        <li><a href="hurghada-snorkeling-adventures.html">Snorkeling</a></li>
+        <li><a class="active" href="booking.html">Booking</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="section">
-  <h2>Reserve Your Spot</h2>
+  <!-- Booking Section -->
+  <section class="booking-section">
+    <div class="container">
+      <h2>Book Your Adventure</h2>
+      <p>Fill in the form below and we’ll get back to you as soon as possible!</p>
+      <form action="https://formspree.io/f/your-code-here" method="POST" class="booking-form">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <select name="tour" required>
+          <option value="">Select a Tour</option>
+          <option value="Cairo Tour">Cairo Tour</option>
+          <option value="Luxor & Aswan Tour">Luxor & Aswan Tour</option>
+          <option value="Hurghada Safari">Hurghada Safari</option>
+          <option value="Snorkeling Adventure">Snorkeling Adventure</option>
+        </select>
+        <textarea name="message" rows="4" placeholder="Additional Message (optional)"></textarea>
+        <button type="submit">Send Booking Request</button>
+      </form>
+    </div>
+  </section>
 
-  <form action="https://formsubmit.co/m47199563@gmail.com" method="POST" onsubmit="return sendWhatsApp();">
-    <input type="text" name="name" id="name" placeholder="Full Name" required />
-    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required />
-    <select name="trip" id="trip" required>
-      <option value="">Select a Trip</option>
-      <option value="Sea Trip">Sea Trip</option>
-      <option value="Desert Safari">Desert Safari</option>
-      <option value="Luxor Tour">Luxor Tour</option>
-      <option value="Cairo Tour">Cairo Tour</option>
-      <option value="Aswan Tour">Aswan Tour</option>
-    </select>
-    <input type="date" name="date" id="date" required />
-    <textarea name="notes" id="notes" placeholder="Additional notes (optional)"></textarea>
-    <input type="hidden" name="_captcha" value="false">
-    <button type="submit">Submit Booking</button>
-  </form>
-
-  <p class="note">We'll contact you shortly to confirm your booking via WhatsApp.</p>
-</section>
-
-<script>
-  function sendWhatsApp() {
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const trip = document.getElementById('trip').value;
-    const date = document.getElementById('date').value;
-    const notes = document.getElementById('notes').value;
-
-    const message = `📩 New Booking:\nName: ${name}\nPhone: ${phone}\nTrip: ${trip}\nDate: ${date}\nNotes: ${notes}`;
-    const url = `https://wa.me/00201020330241?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-    return true;
-  }
-</script>
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/201020330241" class="whatsapp-button" target="_blank">
+    💬 Book on WhatsApp
+  </a>
 
 </body>
 </html>
