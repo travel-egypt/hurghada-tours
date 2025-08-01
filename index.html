@@ -3,78 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hurghada Tours - Explore Egypt</title>
+  <title>Hurghada Tours</title>
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body, html {
-      height: 100%;
       font-family: 'Segoe UI', sans-serif;
+      background: #000;
+      color: #fff;
       overflow: hidden;
     }
     .video-background {
       position: fixed;
       top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100vw; height: 100vh;
       z-index: -1;
-      overflow: hidden;
-    }
-    .video-background iframe {
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
     }
     .overlay {
       position: absolute;
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.55);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
     }
-    .overlay h1 {
-      color: #fff;
-      font-size: 40px;
-      margin-bottom: 20px;
+    .centered-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
     }
     .enter-btn {
+      background-color: #02738c;
+      color: white;
       padding: 15px 30px;
-      font-size: 18px;
-      background-color: #00aaff;
-      color: #fff;
       border: none;
       border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
       cursor: pointer;
       text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
     }
-    .enter-btn:hover {
-      background-color: #0077aa;
+    .lang-selector {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    select {
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
 
-  <div class="video-background">
-    <iframe src="https://www.youtube.com/embed/nfgq0D-gCA4?autoplay=1&mute=1&loop=1&playlist=nfgq0D-gCA4&controls=0&modestbranding=1&showinfo=0"
-      frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-    </iframe>
+  <!-- زر اختيار اللغة -->
+  <div class="lang-selector">
+    <select id="languageSwitcher">
+      <option value="en">English</option>
+      <option value="de">Deutsch</option>
+      <option value="nl">Nederlands</option>
+      <option value="ru">Русский</option>
+      <option value="fr">Français</option>
+    </select>
   </div>
 
-  <div class="overlay">
-    <h1>Welcome to Hurghada Tours</h1>
-    <a href="all-tours.html" class="enter-btn">Enter Site</a>
+  <!-- فيديو الخلفية -->
+  <div class="video-background">
+    <iframe src="https://www.youtube.com/embed/nfgq0D-gCA4?autoplay=1&mute=1&controls=0&loop=1&playlist=nfgq0D-gCA4"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+      width="100%" height="100%">
+    </iframe>
+    <div class="overlay"></div>
   </div>
+
+  <!-- المحتوى المركزي -->
+  <div class="centered-content">
+    <h1 id="main-title">Welcome to Hurghada Tours</h1>
+    <a href="all-tours.html" class="enter-btn" id="enterBtn">Enter Site</a>
+  </div>
+
+  <!-- سكريبت الترجمة -->
+  <script>
+    const translations = {
+      en: {
+        title: "Welcome to Hurghada Tours",
+        button: "Enter Site"
+      },
+      de: {
+        title: "Willkommen bei Hurghada Tours",
+        button: "Webseite betreten"
+      },
+      nl: {
+        title: "Welkom bij Hurghada Tours",
+        button: "Website Betreden"
+      },
+      ru: {
+        title: "Добро пожаловать в Хургада Турс",
+        button: "Войти на сайт"
+      },
+      fr: {
+        title: "Bienvenue chez Hurghada Tours",
+        button: "Entrer sur le site"
+      }
+    };
+
+    const switcher = document.getElementById("languageSwitcher");
+    const title = document.getElementById("main-title");
+    const button = document.getElementById("enterBtn");
+
+    switcher.addEventListener("change", () => {
+      const lang = switcher.value;
+      title.textContent = translations[lang].title;
+      button.textContent = translations[lang].button;
+    });
+  </script>
 
 </body>
 </html>
