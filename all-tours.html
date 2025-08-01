@@ -6,94 +6,65 @@
   <title>All Tours – Hurghada Tours</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #222;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
     }
     header {
-      background-color: #004466;
-      padding: 15px 20px;
+      background: #003049;
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-    }
-    header h1 {
-      color: #fff;
-      margin: 0;
-      font-size: 24px;
-    }
-    nav {
-      background-color: #033f4f;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      padding: 10px;
+      color: white;
     }
     nav a {
-      color: #fff;
+      color: white;
+      margin: 0 10px;
       text-decoration: none;
-      padding: 8px 15px;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-    nav a:hover {
-      background-color: #02738c;
-    }
-    .language-select {
-      margin-left: auto;
-    }
-    select {
-      padding: 6px 10px;
-      border-radius: 5px;
-      border: none;
       font-weight: bold;
     }
-    .hero {
-      padding: 40px 20px 20px;
-      text-align: center;
-    }
-    .hero h2 {
-      font-size: 28px;
-      color: #004466;
-    }
-    .tour-section {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .tour {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.08);
-      margin-bottom: 25px;
-    }
-    .tour h3 {
-      color: #004466;
-      margin-top: 0;
-    }
-    .tour p {
-      margin: 10px 0;
-      line-height: 1.6;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
+    .language-switcher select {
+      padding: 5px;
       font-size: 14px;
-      color: #888;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      background: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #003049;
+    }
+    .book-btn {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: #ffcc00;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Hurghada Tours</h1>
-    <div class="language-select">
-      <select id="languageSelect">
+    <div><strong>Hurghada Tours</strong></div>
+    <nav>
+      <a href="index.html" id="nav-home">Home</a>
+      <a href="all-tours.html" id="nav-tours">Tours</a>
+      <a href="booking.html" id="nav-booking">Booking</a>
+    </nav>
+    <div class="language-switcher">
+      <select id="lang">
         <option value="en">English</option>
         <option value="de">Deutsch</option>
         <option value="nl">Nederlands</option>
@@ -103,132 +74,162 @@
     </div>
   </header>
 
-  <nav>
-    <a href="index.html" data-key="home">Home</a>
-    <a href="all-tours.html" data-key="tours">All Tours</a>
-    <a href="booking.html" data-key="booking">Book Now</a>
-    <a href="contact.html" data-key="contact">Contact</a>
-  </nav>
-
-  <section class="hero">
-    <h2 data-key="explore">Explore Our Best Tours in Egypt</h2>
-  </section>
-
-  <section class="tour-section">
-    <div class="tour">
-      <h3 data-key="safari-title">Hurghada Desert Safari</h3>
-      <p data-key="safari-desc">Enjoy a thrilling ride through the Egyptian desert with 4x4 jeeps and quad bikes, visit a Bedouin village, ride camels, and enjoy a traditional dinner under the stars.</p>
-    </div>
-
-    <div class="tour">
-      <h3 data-key="cairo-title">Cairo Day Tour</h3>
-      <p data-key="cairo-desc">Visit the Great Pyramids of Giza, the Sphinx, the Egyptian Museum, and explore the bustling markets of Old Cairo with an expert guide.</p>
-    </div>
-
-    <div class="tour">
-      <h3 data-key="luxor-title">Luxor & Aswan Nile Cruise</h3>
-      <p data-key="luxor-desc">Sail along the Nile and discover the Valley of the Kings, Karnak Temple, Philae Temple, and the impressive High Dam with luxury accommodation onboard.</p>
-    </div>
-
-    <div class="tour">
-      <h3 data-key="snorkeling-title">Snorkeling Adventure</h3>
-      <p data-key="snorkeling-desc">Swim and snorkel in crystal-clear waters, explore coral reefs, and meet colorful marine life on a Red Sea boat trip from Hurghada.</p>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Hurghada Tours. All rights reserved.
-  </footer>
+  <main id="content">
+    <!-- Dynamic content will be inserted here -->
+  </main>
 
   <script>
-    const translations = {
+    const data = {
       en: {
-        home: "Home",
-        tours: "All Tours",
-        booking: "Book Now",
-        contact: "Contact",
-        explore: "Explore Our Best Tours in Egypt",
-        "safari-title": "Hurghada Desert Safari",
-        "safari-desc": "Enjoy a thrilling ride through the Egyptian desert with 4x4 jeeps and quad bikes, visit a Bedouin village, ride camels, and enjoy a traditional dinner under the stars.",
-        "cairo-title": "Cairo Day Tour",
-        "cairo-desc": "Visit the Great Pyramids of Giza, the Sphinx, the Egyptian Museum, and explore the bustling markets of Old Cairo with an expert guide.",
-        "luxor-title": "Luxor & Aswan Nile Cruise",
-        "luxor-desc": "Sail along the Nile and discover the Valley of the Kings, Karnak Temple, Philae Temple, and the impressive High Dam with luxury accommodation onboard.",
-        "snorkeling-title": "Snorkeling Adventure",
-        "snorkeling-desc": "Swim and snorkel in crystal-clear waters, explore coral reefs, and meet colorful marine life on a Red Sea boat trip from Hurghada."
+        nav: { home: "Home", tours: "Tours", booking: "Booking" },
+        tours: [
+          {
+            title: "Desert Safari Adventure",
+            desc: "Experience the thrill of a desert safari with quad biking, camel rides, and a Bedouin dinner under the stars.",
+            link: "booking.html"
+          },
+          {
+            title: "Snorkeling in the Red Sea",
+            desc: "Discover the underwater world of the Red Sea with guided snorkeling trips to vibrant coral reefs.",
+            link: "booking.html"
+          },
+          {
+            title: "Cairo Day Tour",
+            desc: "Visit the Great Pyramids, the Sphinx, and the Egyptian Museum in a full-day guided tour from Hurghada.",
+            link: "booking.html"
+          },
+          {
+            title: "Luxor & Aswan Tour",
+            desc: "Explore ancient temples and tombs in Luxor and Aswan, including Karnak Temple and the Valley of the Kings.",
+            link: "booking.html"
+          }
+        ]
       },
       de: {
-        home: "Startseite",
-        tours: "Alle Touren",
-        booking: "Jetzt Buchen",
-        contact: "Kontakt",
-        explore: "Entdecken Sie unsere besten Touren in Ägypten",
-        "safari-title": "Hurghada Wüstensafari",
-        "safari-desc": "Erleben Sie eine aufregende Fahrt durch die ägyptische Wüste mit Jeeps und Quads, besuchen Sie ein Beduinendorf und genießen Sie ein traditionelles Abendessen unter den Sternen.",
-        "cairo-title": "Tagesausflug nach Kairo",
-        "cairo-desc": "Besuchen Sie die Pyramiden von Gizeh, die Sphinx und das Ägyptische Museum und erkunden Sie die Altstadt von Kairo mit einem professionellen Reiseleiter.",
-        "luxor-title": "Luxor & Assuan Nilkreuzfahrt",
-        "luxor-desc": "Fahren Sie auf dem Nil und entdecken Sie das Tal der Könige, den Karnak-Tempel, den Philae-Tempel und den Hochdamm mit luxuriöser Unterkunft.",
-        "snorkeling-title": "Schnorchelabenteuer",
-        "snorkeling-desc": "Schwimmen und schnorcheln Sie im kristallklaren Wasser des Roten Meeres und entdecken Sie bunte Fische und Korallenriffe."
+        nav: { home: "Startseite", tours: "Touren", booking: "Buchung" },
+        tours: [
+          {
+            title: "Wüstensafari-Abenteuer",
+            desc: "Erleben Sie den Nervenkitzel einer Wüstensafari mit Quadfahren, Kamelreiten und Beduinen-Abendessen unter dem Sternenhimmel.",
+            link: "booking.html"
+          },
+          {
+            title: "Schnorcheln im Roten Meer",
+            desc: "Entdecken Sie die Unterwasserwelt des Roten Meeres bei geführten Schnorchelausflügen zu bunten Korallenriffen.",
+            link: "booking.html"
+          },
+          {
+            title: "Tagesausflug nach Kairo",
+            desc: "Besuchen Sie die Großen Pyramiden, die Sphinx und das Ägyptische Museum bei einer geführten Tagestour ab Hurghada.",
+            link: "booking.html"
+          },
+          {
+            title: "Luxor & Assuan Tour",
+            desc: "Erkunden Sie antike Tempel und Gräber in Luxor und Assuan, darunter der Karnak-Tempel und das Tal der Könige.",
+            link: "booking.html"
+          }
+        ]
       },
       nl: {
-        home: "Home",
-        tours: "Alle Rondleidingen",
-        booking: "Boek Nu",
-        contact: "Contact",
-        explore: "Ontdek onze beste tours in Egypte",
-        "safari-title": "Woestijnsafari Hurghada",
-        "safari-desc": "Geniet van een spannende rit door de Egyptische woestijn met jeeps en quads, bezoek een bedoeïenendorp en proef een traditionele maaltijd onder de sterren.",
-        "cairo-title": "Dagtocht naar Caïro",
-        "cairo-desc": "Bezoek de Piramides van Gizeh, de Sfinx, het Egyptisch Museum en de oude bazaar van Caïro met een gids.",
-        "luxor-title": "Luxor & Aswan Nijlcruise",
-        "luxor-desc": "Vaar over de Nijl en ontdek de Vallei der Koningen, de Karnaktempel, Philaetempel en de Hoge Dam met luxe accommodatie.",
-        "snorkeling-title": "Snorkelavontuur",
-        "snorkeling-desc": "Zwem en snorkel in het heldere water van de Rode Zee en ontmoet kleurrijke zeedieren."
+        nav: { home: "Home", tours: "Tours", booking: "Boeking" },
+        tours: [
+          {
+            title: "Woestijnsafari Avontuur",
+            desc: "Beleef de spanning van een woestijnsafari met quadrijden, kameelritten en een bedoeïenenmaaltijd onder de sterren.",
+            link: "booking.html"
+          },
+          {
+            title: "Snorkelen in de Rode Zee",
+            desc: "Ontdek de onderwaterwereld van de Rode Zee tijdens begeleide snorkeltrips naar kleurrijke koraalriffen.",
+            link: "booking.html"
+          },
+          {
+            title: "Cairo Dagtour",
+            desc: "Bezoek de Grote Piramides, de Sfinx en het Egyptisch Museum tijdens een volledige dagtour vanuit Hurghada.",
+            link: "booking.html"
+          },
+          {
+            title: "Luxor & Aswan Tour",
+            desc: "Verken oude tempels en graven in Luxor en Aswan, waaronder de Karnak-tempel en de Vallei der Koningen.",
+            link: "booking.html"
+          }
+        ]
       },
       ru: {
-        home: "Главная",
-        tours: "Все туры",
-        booking: "Забронировать",
-        contact: "Контакты",
-        explore: "Исследуйте лучшие туры по Египту",
-        "safari-title": "Сафари в пустыне Хургады",
-        "safari-desc": "Наслаждайтесь поездкой по пустыне на джипах и квадроциклах, посетите бедуинскую деревню и насладитесь ужином под звездами.",
-        "cairo-title": "Тур в Каир",
-        "cairo-desc": "Посетите пирамиды Гизы, Сфинкса и Египетский музей, а также старый рынок Каира.",
-        "luxor-title": "Круиз по Нилу: Луксор и Асуан",
-        "luxor-desc": "Путешествуйте по Нилу, откройте для себя Долину Царей, храм Карнак, Филе и Асуанскую плотину.",
-        "snorkeling-title": "Снорклинг-приключение",
-        "snorkeling-desc": "Погрузитесь в кристально чистую воду Красного моря и исследуйте коралловые рифы."
+        nav: { home: "Главная", tours: "Туры", booking: "Бронирование" },
+        tours: [
+          {
+            title: "Пустынное сафари",
+            desc: "Почувствуйте азарт пустынного сафари: квадроциклы, верблюды и ужин с бедуинами под звёздами.",
+            link: "booking.html"
+          },
+          {
+            title: "Сноркелинг в Красном море",
+            desc: "Исследуйте подводный мир Красного моря во время экскурсий по красочным коралловым рифам.",
+            link: "booking.html"
+          },
+          {
+            title: "Экскурсия в Каир",
+            desc: "Посетите Великие пирамиды, Сфинкса и Египетский музей в рамках однодневного тура из Хургады.",
+            link: "booking.html"
+          },
+          {
+            title: "Тур в Луксор и Асуан",
+            desc: "Откройте для себя древние храмы и гробницы в Луксоре и Асуане, включая Карнак и Долину Царей.",
+            link: "booking.html"
+          }
+        ]
       },
       fr: {
-        home: "Accueil",
-        tours: "Toutes les excursions",
-        booking: "Réserver",
-        contact: "Contact",
-        explore: "Découvrez nos meilleures excursions en Égypte",
-        "safari-title": "Safari dans le désert de Hurghada",
-        "safari-desc": "Profitez d'une balade palpitante dans le désert égyptien avec des jeeps et des quads, visitez un village bédouin et savourez un dîner traditionnel sous les étoiles.",
-        "cairo-title": "Excursion au Caire",
-        "cairo-desc": "Visitez les Pyramides de Gizeh, le Sphinx, le Musée égyptien et les anciens souks du Caire avec un guide expert.",
-        "luxor-title": "Croisière sur le Nil à Louxor et Assouan",
-        "luxor-desc": "Naviguez sur le Nil et découvrez la Vallée des Rois, le temple de Karnak, Philae et le Haut Barrage avec hébergement de luxe.",
-        "snorkeling-title": "Aventure de plongée en apnée",
-        "snorkeling-desc": "Nagez dans des eaux cristallines et explorez les récifs coralliens de la mer Rouge."
+        nav: { home: "Accueil", tours: "Excursions", booking: "Réserver" },
+        tours: [
+          {
+            title: "Aventure Safari dans le Désert",
+            desc: "Vivez les sensations d'un safari dans le désert avec quad, balade à dos de chameau et dîner bédouin sous les étoiles.",
+            link: "booking.html"
+          },
+          {
+            title: "Plongée en apnée en Mer Rouge",
+            desc: "Explorez le monde sous-marin de la Mer Rouge lors d'excursions guidées vers des récifs coralliens colorés.",
+            link: "booking.html"
+          },
+          {
+            title: "Excursion d'une journée au Caire",
+            desc: "Visitez les grandes pyramides, le Sphinx et le musée égyptien lors d'une visite guidée depuis Hurghada.",
+            link: "booking.html"
+          },
+          {
+            title: "Excursion à Louxor & Assouan",
+            desc: "Explorez les anciens temples et tombeaux de Louxor et d’Assouan, y compris Karnak et la Vallée des Rois.",
+            link: "booking.html"
+          }
+        ]
       }
     };
 
-    const langSelect = document.getElementById("languageSelect");
+    const langSelect = document.getElementById('lang');
+    const content = document.getElementById('content');
+
+    function renderPage(language) {
+      const t = data[language];
+      document.getElementById("nav-home").textContent = t.nav.home;
+      document.getElementById("nav-tours").textContent = t.nav.tours;
+      document.getElementById("nav-booking").textContent = t.nav.booking;
+
+      content.innerHTML = t.tours.map(tour => `
+        <section>
+          <h2>${tour.title}</h2>
+          <p>${tour.desc}</p>
+          <a class="book-btn" href="${tour.link}">Book Now</a>
+        </section>
+      `).join('');
+    }
+
     langSelect.addEventListener("change", () => {
-      const lang = langSelect.value;
-      document.querySelectorAll("[data-key]").forEach(el => {
-        const key = el.getAttribute("data-key");
-        if (translations[lang][key]) {
-          el.innerText = translations[lang][key];
-        }
-      });
+      renderPage(langSelect.value);
     });
+
+    renderPage("en"); // Default
   </script>
 
 </body>
