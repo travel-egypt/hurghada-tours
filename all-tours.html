@@ -1,186 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>All Tours | Hurghada Tours</title>
+  <meta name="description" content="Discover all the best tours from Hurghada. Safari, Snorkeling, Cairo, Luxor, and more. Full programs and booking available.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f9f9f9;
-      color: #222;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
     }
     header {
-      background-color: #004466;
-      padding: 15px 20px;
+      background-color: #023e8a;
+      color: white;
       text-align: center;
-    }
-    header h1 {
-      color: #fff;
-      margin: 0;
+      padding: 20px;
     }
     nav {
-      background-color: #033f4f;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
+      background-color: #0077b6;
       padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     nav a {
       color: white;
       text-decoration: none;
+      margin: 10px 15px;
       font-weight: bold;
-      padding: 8px 16px;
-      border-radius: 5px;
-      transition: background 0.3s;
     }
-    nav a:hover {
-      background-color: #02738c;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 30px auto;
+    .tour-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: grid;
+      gap: 30px;
       padding: 0 20px;
     }
-    .tour-section {
-      background: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 40px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    .tour-card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .tour-section h2 {
-      color: #004466;
+    .tour-card h2 {
+      color: #0077b6;
       margin-bottom: 15px;
     }
-    .tour-section h3 {
-      margin: 10px 0;
+    .tour-card p {
+      line-height: 1.7;
+      margin-bottom: 20px;
     }
-    ul {
-      margin: 10px 0 20px;
-      padding-left: 20px;
+    .book-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00b894;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .book-btn:hover {
+      background-color: #009475;
     }
     footer {
+      background-color: #023e8a;
+      color: white;
       text-align: center;
-      padding: 20px;
-      color: #888;
-      font-size: 14px;
+      padding: 15px;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>All Tours - Hurghada Tours</h1>
-  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="cairo-tours.html">Cairo Tours</a>
-    <a href="luxor-aswan-tours.html">Luxor & Aswan</a>
-    <a href="hurghada-safari.html">Safari</a>
-    <a href="hurghada-snorkeling-adventures.html">Snorkeling</a>
-    <a href="booking.html">Book Now</a>
-  </nav>
+<header>
+  <h1>All Tours</h1>
+  <p>Explore our most popular trips across Egypt</p>
+</header>
 
-  <div class="container">
+<nav>
+  <a href="index.html">Home</a>
+  <a href="cairo-tours.html">Cairo</a>
+  <a href="luxor-aswan-tours.html">Luxor & Aswan</a>
+  <a href="hurghada-safari.html">Safari</a>
+  <a href="hurghada-snorkeling-adventures.html">Snorkeling</a>
+  <a href="booking.html">Booking</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-    <div class="tour-section">
-      <h2>Safari Program - Full Day Adventure in the Desert</h2>
-      <h3>Trip Overview</h3>
-      <p>Join us on an unforgettable desert adventure through the Eastern Sahara. Discover the authentic Bedouin lifestyle, ride quad bikes, enjoy a camel ride, and witness a breathtaking desert sunset with a delicious BBQ dinner.</p>
-      <h3>Itinerary</h3>
-      <ul>
-        <li><strong>1:00 PM – Pickup</strong> from your hotel</li>
-        <li><strong>2:00 PM – Quad Biking</strong> adventure through the sand dunes</li>
-        <li><strong>3:00 PM – Buggy Ride</strong> (optional)</li>
-        <li><strong>3:30 PM – Bedouin Village</strong> visit and culture experience</li>
-        <li><strong>4:00 PM – Camel Ride</strong> and scenic photos</li>
-        <li><strong>5:00 PM – Bedouin Tea & Shisha</strong> (optional)</li>
-        <li><strong>6:00 PM – Sunset BBQ Dinner</strong></li>
-        <li><strong>7:00 PM – Oriental Show</strong> with Tanoura, belly dance, fire show</li>
-        <li><strong>8:00 PM – Return</strong> to your hotel</li>
-      </ul>
-      <h3>What's Included</h3>
-      <ul>
-        <li>Hotel transfers</li>
-        <li>Quad bike, camel ride</li>
-        <li>Bedouin village tour</li>
-        <li>BBQ dinner + soft drinks</li>
-        <li>Oriental show</li>
-        <li>English-speaking guide</li>
-      </ul>
-    </div>
+<div class="tour-container">
 
-    <div class="tour-section">
-      <h2>Cairo Day Trip - Explore the Pyramids</h2>
-      <h3>Trip Overview</h3>
-      <p>A magical journey from Hurghada to Cairo where you’ll discover the Great Pyramids of Giza, the Sphinx, and the treasures of the Egyptian Museum.</p>
-      <h3>Itinerary</h3>
-      <ul>
-        <li>Early morning pickup from your hotel</li>
-        <li>Visit the Egyptian Museum with guided tour</li>
-        <li>Lunch at a local restaurant</li>
-        <li>Explore Giza Pyramids, the Sphinx, and Valley Temple</li>
-        <li>Shopping at papyrus and perfume bazaars</li>
-        <li>Drive back to Hurghada</li>
-      </ul>
-      <h3>What's Included</h3>
-      <ul>
-        <li>Transfers by air-conditioned vehicle</li>
-        <li>Entrance fees to all sites</li>
-        <li>Lunch and bottled water</li>
-        <li>Licensed Egyptologist guide</li>
-      </ul>
-    </div>
-
-    <div class="tour-section">
-      <h2>Luxor & Aswan Tour - Nile Treasures</h2>
-      <h3>Trip Overview</h3>
-      <p>Travel back in time to ancient Thebes, the Valley of the Kings, Karnak Temple, and Luxor Temple in this unforgettable journey to Upper Egypt.</p>
-      <h3>Itinerary</h3>
-      <ul>
-        <li>Visit Karnak Temple and Luxor Temple</li>
-        <li>Cross the Nile to the Valley of the Kings</li>
-        <li>See Queen Hatshepsut Temple</li>
-        <li>Visit Colossi of Memnon</li>
-        <li>Lunch at a local restaurant</li>
-      </ul>
-      <h3>What's Included</h3>
-      <ul>
-        <li>Round-trip transportation</li>
-        <li>Licensed guide</li>
-        <li>Lunch & drinks</li>
-        <li>Entrance tickets</li>
-      </ul>
-    </div>
-
-    <div class="tour-section">
-      <h2>Snorkeling Adventure - Red Sea Wonders</h2>
-      <h3>Trip Overview</h3>
-      <p>Explore the magical underwater world of the Red Sea with our snorkeling boat trip. Perfect for families, couples, and adventure seekers.</p>
-      <h3>Itinerary</h3>
-      <ul>
-        <li>Pickup from your hotel</li>
-        <li>Boat ride to coral reef sites</li>
-        <li>Snorkeling in 2–3 different spots</li>
-        <li>Lunch on board the boat</li>
-        <li>Free time for sunbathing & relaxation</li>
-      </ul>
-      <h3>What's Included</h3>
-      <ul>
-        <li>Hotel transfer</li>
-        <li>Snorkeling gear</li>
-        <li>Lunch and drinks</li>
-        <li>Life jackets and safety equipment</li>
-      </ul>
-    </div>
-
+  <div class="tour-card">
+    <h2>🦁 Desert Safari Adventure</h2>
+    <p>
+      An adrenaline-pumping desert adventure with quad biking, camel rides, Bedouin village visit, traditional dinner, and stargazing.
+      <br><br>
+      <strong>Program:</strong><br>
+      - Pick-up from hotel<br>
+      - Quad biking (45 mins)<br>
+      - Visit Bedouin village & camel ride<br>
+      - BBQ dinner & traditional show<br>
+      - Stargazing & return
+    </p>
+    <a href="booking.html" class="book-btn">Book Now</a>
   </div>
 
-  <footer>
-    &copy; 2025 Hurghada Tours. All rights reserved.
-  </footer>
+  <div class="tour-card">
+    <h2>🐠 Snorkeling Paradise</h2>
+    <p>
+      Explore the underwater wonders of the Red Sea! Visit two snorkeling spots with colorful coral reefs and marine life.
+      <br><br>
+      <strong>Program:</strong><br>
+      - Pick-up from hotel to marina<br>
+      - Boat trip to two snorkeling spots<br>
+      - Lunch & soft drinks on board<br>
+      - Return in the afternoon
+    </p>
+    <a href="booking.html" class="book-btn">Book Now</a>
+  </div>
+
+  <div class="tour-card">
+    <h2>🏛️ Cairo Day Trip</h2>
+    <p>
+      Discover the Great Pyramids, Sphinx, and Egyptian Museum in a full-day adventure from Hurghada.
+      <br><br>
+      <strong>Program:</strong><br>
+      - Early morning pickup<br>
+      - Giza Pyramids & Sphinx<br>
+      - Egyptian Museum tour<br>
+      - Nile boat ride (optional)<br>
+      - Lunch & return in evening
+    </p>
+    <a href="booking.html" class="book-btn">Book Now</a>
+  </div>
+
+  <div class="tour-card">
+    <h2>🛕 Luxor & Aswan Tour</h2>
+    <p>
+      Travel to the heart of ancient Egypt. See Karnak Temple, Valley of the Kings, and more in this historical journey.
+      <br><br>
+      <strong>Program:</strong><br>
+      - Pickup & travel to Luxor<br>
+      - Karnak Temple & Nile view<br>
+      - Valley of the Kings<br>
+      - Hatshepsut Temple<br>
+      - Lunch and return
+    </p>
+    <a href="booking.html" class="book-btn">Book Now</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 Hurghada Tours. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
