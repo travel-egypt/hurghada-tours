@@ -4,154 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>All Tours | Hurghada Tours</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      padding-bottom: 60px;
+    .lang-select {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
     }
-    header, footer {
-      background-color: #0077b6;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      margin: 20px;
-      color: #023e8a;
-    }
-    .tour-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .tour-card {
-      background: white;
+    .tour {
+      border: 1px solid #ddd;
       border-radius: 10px;
+      margin-bottom: 30px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .tour-card:hover {
-      transform: translateY(-5px);
-    }
-    .thumbnail {
-      position: relative;
-      cursor: pointer;
-    }
-    .thumbnail img {
+    .tour img {
       width: 100%;
-      display: block;
-    }
-    .thumbnail .play-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 40px;
-      color: white;
-      background: rgba(0,0,0,0.6);
-      border-radius: 50%;
-      padding: 10px 15px;
+      height: auto;
+      cursor: pointer;
     }
     .tour-content {
       padding: 20px;
     }
-    .tour-content h3 {
-      margin-top: 0;
-    }
     .tour-content p {
-      color: #555;
-      font-size: 14px;
-      line-height: 1.6;
+      margin-bottom: 10px;
     }
-    .book-btn {
+    .btn {
       display: inline-block;
-      background-color: #0077b6;
-      color: white;
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: #fff;
       text-decoration: none;
-      padding: 10px 15px;
-      margin-top: 10px;
       border-radius: 5px;
-      transition: 0.3s;
+      transition: background 0.3s;
     }
-    .book-btn:hover {
-      background-color: #023e8a;
-    }
-
-    /* Lightbox */
-    #lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.8);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-    #lightbox iframe {
-      width: 90%;
-      height: 80vh;
-    }
-    #lightbox .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: white;
-      font-size: 30px;
-      cursor: pointer;
+    .btn:hover {
+      background-color: #c2185b;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>All Tours</h1>
-  </header>
+  <div class="lang-select">
+    <select id="languageSwitcher">
+      <option value="en">English</option>
+      <option value="de">Deutsch</option>
+      <option value="nl">Nederlands</option>
+      <option value="ru">Русский</option>
+      <option value="fr">Français</option>
+    </select>
+  </div>
 
-  <div class="tour-grid">
-    <!-- Sample Tour -->
-    <div class="tour-card">
-      <div class="thumbnail" onclick="openLightbox('https://www.youtube.com/embed/EzV8R4odvcM')">
-        <img src="https://img.youtube.com/vi/EzV8R4odvcM/hqdefault.jpg" alt="Safari Tour">
-        <i class="fas fa-play play-btn"></i>
-      </div>
+  <div class="container">
+    <h1 data-en="Explore Our Tours" data-de="Entdecken Sie unsere Touren" data-nl="Ontdek onze tours" data-ru="Исследуйте наши туры" data-fr="Découvrez nos circuits">Explore Our Tours</h1>
+
+    <!-- Safari Tour -->
+    <div class="tour">
+      <img src="images/safari.jpg" onclick="openVideo('https://www.youtube.com/embed/AZ2y7wZ4_wY')" alt="Hurghada Desert Safari">
       <div class="tour-content">
-        <h3>Hurghada Desert Safari</h3>
-        <p>Experience the thrill of quad biking through desert dunes, visit a Bedouin village, ride camels, and enjoy a sunset BBQ dinner and oriental show.</p>
-        <a href="booking.html?tour=safari" class="book-btn">Book Now</a>
+        <p data-en="Enjoy a thrilling desert safari adventure including quad biking, camel riding, and a Bedouin dinner under the stars."
+           data-de="Genießen Sie ein aufregendes Wüstensafari-Abenteuer mit Quadfahren, Kamelreiten und einem Beduinendinner unter den Sternen."
+           data-nl="Geniet van een spannende woestijnsafari met quadrijden, kameelrijden en een bedoeïenendiner onder de sterren."
+           data-ru="Насладитесь захватывающим сафари по пустыне с катанием на квадроциклах, верблюдах и ужином у бедуинов под звездами."
+           data-fr="Profitez d'une passionnante aventure en safari dans le désert avec quad, balade à dos de chameau et dîner bédouin sous les étoiles.">
+          Enjoy a thrilling desert safari adventure including quad biking, camel riding, and a Bedouin dinner under the stars.
+        </p>
+        <a href="booking-safari.html" class="btn" data-en="Book Now" data-de="Jetzt buchen" data-nl="Boek nu" data-ru="Забронировать" data-fr="Réserver maintenant">Book Now</a>
       </div>
     </div>
-    <!-- Repeat for other tours -->
+
+    <!-- Cairo Tours -->
+    <div class="tour">
+      <img src="images/cairo.jpg" onclick="openVideo('https://www.youtube.com/embed/W6EDzpUJRcs')" alt="Cairo Tours">
+      <div class="tour-content">
+        <p data-en="Explore the ancient wonders of Cairo, including the Pyramids of Giza, the Sphinx, and the Egyptian Museum."
+           data-de="Erkunden Sie die antiken Wunder Kairos, einschließlich der Pyramiden von Gizeh, der Sphinx und des Ägyptischen Museums."
+           data-nl="Verken de oude wonderen van Caïro, waaronder de piramides van Gizeh, de sfinx en het Egyptisch Museum."
+           data-ru="Исследуйте древние чудеса Каира, включая пирамиды Гизы, Сфинкса и Египетский музей."
+           data-fr="Explorez les merveilles antiques du Caire, y compris les pyramides de Gizeh, le Sphinx et le musée égyptien.">
+          Explore the ancient wonders of Cairo, including the Pyramids of Giza, the Sphinx, and the Egyptian Museum.
+        </p>
+        <a href="booking-cairo.html" class="btn" data-en="Book Now" data-de="Jetzt buchen" data-nl="Boek nu" data-ru="Забронировать" data-fr="Réserver maintenant">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Luxor & Aswan Tours -->
+    <div class="tour">
+      <img src="images/luxor.jpg" onclick="openVideo('https://www.youtube.com/embed/jNGDgNaxFig')" alt="Luxor & Aswan Tours">
+      <div class="tour-content">
+        <p data-en="Discover the grandeur of ancient Egypt in Luxor & Aswan, visiting the Valley of the Kings, Karnak Temple, and Philae Temple."
+           data-de="Entdecken Sie die Pracht des alten Ägyptens in Luxor & Assuan mit dem Tal der Könige, dem Karnak-Tempel und dem Philae-Tempel."
+           data-nl="Ontdek de grootsheid van het oude Egypte in Luxor & Aswan, met het Dal der Koningen, de Karnak-tempel en de Philae-tempel."
+           data-ru="Откройте для себя величие Древнего Египта в Луксоре и Асуане, посетив Долину царей, храм Карнака и храм Фила."
+           data-fr="Découvrez la grandeur de l'Égypte ancienne à Louxor & Assouan, avec la Vallée des Rois, le temple de Karnak et le temple de Philae.">
+          Discover the grandeur of ancient Egypt in Luxor & Aswan, visiting the Valley of the Kings, Karnak Temple, and Philae Temple.
+        </p>
+        <a href="booking-luxor.html" class="btn" data-en="Book Now" data-de="Jetzt buchen" data-nl="Boek nu" data-ru="Забронировать" data-fr="Réserver maintenant">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Snorkeling Adventures -->
+    <div class="tour">
+      <img src="images/snorkeling.jpg" onclick="openVideo('https://www.youtube.com/embed/S38iLh9J_GY')" alt="Snorkeling Adventures">
+      <div class="tour-content">
+        <p data-en="Experience the Red Sea’s underwater beauty with a snorkeling adventure to vibrant coral reefs and marine life."
+           data-de="Erleben Sie die Unterwasserschönheit des Roten Meeres mit einem Schnorchelabenteuer zu lebendigen Korallenriffen und Meereslebewesen."
+           data-nl="Beleef de onderwaterpracht van de Rode Zee met een snorkelavontuur naar kleurrijke koraalriffen en zeedieren."
+           data-ru="Откройте подводную красоту Красного моря во время сноркелинга к ярким коралловым рифам и морской жизни."
+           data-fr="Découvrez la beauté sous-marine de la mer Rouge avec une aventure de plongée en apnée sur des récifs coralliens vibrants et une vie marine.">
+          Experience the Red Sea’s underwater beauty with a snorkeling adventure to vibrant coral reefs and marine life.
+        </p>
+        <a href="booking-snorkeling.html" class="btn" data-en="Book Now" data-de="Jetzt buchen" data-nl="Boek nu" data-ru="Забронировать" data-fr="Réserver maintenant">Book Now</a>
+      </div>
+    </div>
+
   </div>
 
-  <div id="lightbox">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <iframe src="" frameborder="0" allowfullscreen></iframe>
+  <!-- Lightbox Modal -->
+  <div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center;">
+    <iframe id="videoFrame" width="80%" height="80%" frameborder="0" allowfullscreen></iframe>
+    <span onclick="closeVideo()" style="position:absolute; top:20px; right:30px; font-size:40px; color:#fff; cursor:pointer;">&times;</span>
   </div>
-
-  <footer>
-    <p>&copy; 2025 Hurghada Tours. All rights reserved.</p>
-  </footer>
 
   <script>
-    const lightbox = document.getElementById('lightbox');
-    const iframe = lightbox.querySelector('iframe');
-
-    function openLightbox(videoUrl) {
-      iframe.src = videoUrl + '?autoplay=1';
-      lightbox.style.display = 'flex';
+    function openVideo(url) {
+      document.getElementById('videoFrame').src = url;
+      document.getElementById('videoModal').style.display = 'flex';
+    }
+    function closeVideo() {
+      document.getElementById('videoFrame').src = '';
+      document.getElementById('videoModal').style.display = 'none';
     }
 
-    function closeLightbox() {
-      iframe.src = '';
-      lightbox.style.display = 'none';
-    }
+    document.getElementById('languageSwitcher').addEventListener('change', function () {
+      const lang = this.value;
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+    });
   </script>
 </body>
 </html>
