@@ -5,82 +5,199 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Book Your Tour | Hurghada Tours</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #0a2239;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header a {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffcc00;
+    }
+
+    .booking-section {
+      padding: 3rem 1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .booking-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #0a2239;
+      margin-bottom: 2rem;
+    }
+
+    .booking-form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      background-color: #ff9900;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #cc7a00;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #0a2239;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">Hurghada Tours</a>
-      <ul class="nav-links">
-        <li><a href="cairo-tours.html">Cairo Tours</a></li>
-        <li><a href="luxor-aswan-tours.html">Luxor & Aswan</a></li>
-        <li><a href="hurghada-safari.html">Hurghada Safari</a></li>
-        <li><a href="hurghada-snorkeling-adventures.html">Snorkeling</a></li>
-        <li><a href="booking.html" class="active">Booking</a></li>
-      </ul>
-    </div>
-  </nav>
+  <header>
+    <a href="index.html">Hurghada Tours</a>
+    <nav>
+      <a href="cairo-tours.html">Cairo Tours</a>
+      <a href="luxor-aswan-tours.html">Luxor & Aswan</a>
+      <a href="hurghada-safari.html">Safari</a>
+      <a href="hurghada-snorkeling-adventures.html">Snorkeling</a>
+      <a href="booking.html" class="active">Booking</a>
+    </nav>
+  </header>
 
   <!-- Booking Section -->
   <section class="booking-section">
-    <div class="container">
-      <h2>Book Your Tour</h2>
-      <form class="booking-form" onsubmit="return handleBooking(event)">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required />
-        </div>
+    <h2>Book Your Tour</h2>
+    <form class="booking-form" onsubmit="return handleBooking(event)">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
 
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required />
-        </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
 
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required />
-        </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
 
-        <div class="form-group">
-          <label for="tour">Select Tour</label>
-          <select id="tour" name="tour" required>
-            <option value="" disabled selected>Choose a tour</option>
-            <option value="Cairo">Cairo Tours</option>
-            <option value="Luxor & Aswan">Luxor & Aswan</option>
-            <option value="Hurghada Safari">Hurghada Safari</option>
-            <option value="Snorkeling">Snorkeling Adventures</option>
-          </select>
-        </div>
+      <div class="form-group">
+        <label for="tour">Select Tour</label>
+        <select id="tour" name="tour" required>
+          <option value="" disabled selected>Choose a tour</option>
+          <option value="Cairo">Cairo Tours</option>
+          <option value="Luxor & Aswan">Luxor & Aswan</option>
+          <option value="Hurghada Safari">Hurghada Safari</option>
+          <option value="Snorkeling">Snorkeling Adventures</option>
+        </select>
+      </div>
 
-        <div class="form-group">
-          <label for="date">Date of the Tour</label>
-          <input type="date" id="date" name="date" required />
-        </div>
+      <div class="form-group">
+        <label for="date">Date of the Tour</label>
+        <input type="date" id="date" name="date" required />
+      </div>
 
-        <div class="form-group">
-          <label for="people">Number of People</label>
-          <input type="number" id="people" name="people" min="1" required />
-        </div>
+      <div class="form-group">
+        <label for="people">Number of People</label>
+        <input type="number" id="people" name="people" min="1" required />
+      </div>
 
-        <div class="form-group">
-          <label for="contact">Preferred Contact Method</label>
-          <select id="contact" name="contact">
-            <option value="WhatsApp">WhatsApp</option>
-            <option value="Email">Email</option>
-          </select>
-        </div>
+      <div class="form-group">
+        <label for="contact">Preferred Contact Method</label>
+        <select id="contact" name="contact">
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="Email">Email</option>
+        </select>
+      </div>
 
-        <div class="form-group">
-          <label for="notes">Additional Notes</label>
-          <textarea id="notes" name="notes" rows="4" placeholder="Any special requests..."></textarea>
-        </div>
+      <div class="form-group">
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Any special requests..."></textarea>
+      </div>
 
-        <button type="submit" class="btn">Book Now</button>
-      </form>
-    </div>
+      <button type="submit" class="btn">Book Now</button>
+    </form>
   </section>
 
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Hurghada Tours. All Rights Reserved.
+  </footer>
+
+  <!-- JS Confirmation -->
   <script>
     function handleBooking(e) {
       e.preventDefault();
@@ -88,5 +205,6 @@
       return false;
     }
   </script>
+
 </body>
 </html>
