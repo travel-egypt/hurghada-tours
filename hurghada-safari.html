@@ -2,123 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hurghada Desert Safari | Hurghada Tours</title>
-  <meta name="description" content="Join our thrilling desert safari tours in Hurghada – quad biking, Bedouin life, and sunset experiences.">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fffbea;
-      color: #333;
+      background: #eef2f3;
+      color: #222;
     }
+
     header {
-      background-color: #d77a61;
-      color: white;
+      background: linear-gradient(to right, #004466, #02738c);
+      color: #fff;
+      padding: 40px 20px;
       text-align: center;
-      padding: 25px;
     }
-    nav {
-      background-color: #c44536;
-      padding: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 10px 15px;
-      font-weight: bold;
+
+    .tour-section {
+      max-width: 1000px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
     }
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .tour-card {
-      background-color: white;
-      padding: 25px;
-      margin-bottom: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .tour-card h3 {
-      color: #b02e0c;
-      margin-bottom: 15px;
-    }
-    .tour-card iframe {
+
+    .tour-banner {
       width: 100%;
-      height: 315px;
-      border: none;
-      border-radius: 10px;
+      height: 280px;
+      background: url('https://i.imgur.com/dZrReMj.jpg') center center/cover no-repeat;
+    }
+
+    .tour-content {
+      padding: 30px;
+    }
+
+    .tour-content h2 {
+      color: #004466;
+      font-size: 26px;
       margin-bottom: 15px;
     }
-    .book-btn {
-      display: inline-block;
-      padding: 10px 18px;
-      background-color: #bc6c25;
-      color: white;
-      border-radius: 6px;
+
+    .tour-content p {
+      line-height: 1.6;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .tour-content ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .tour-content ul li {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .btn-group a {
       text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: 0.3s;
     }
+
+    .explore-btn {
+      background-color: #004466;
+      color: #fff;
+    }
+
+    .explore-btn:hover {
+      background-color: #02738c;
+    }
+
+    .book-btn {
+      background-color: #ffaa00;
+      color: #fff;
+    }
+
     .book-btn:hover {
-      background-color: #99582a;
+      background-color: #e69500;
     }
-    footer {
-      background-color: #d77a61;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
+
+    @media (max-width: 600px) {
+      .btn-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Hurghada Desert Safari</h1>
-  <p>Experience the thrill of the desert – Quad biking, Bedouin culture, and unforgettable sunsets</p>
-</header>
+  <header>
+    <h1>Hurghada Desert Safari – Full-Day Adventure</h1>
+  </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="all-tours.html">All Tours</a>
-  <a href="cairo-tours.html">Cairo</a>
-  <a href="luxor-aswan-tours.html">Luxor & Aswan</a>
-  <a href="hurghada-snorkeling-adventures.html">Snorkeling</a>
-  <a href="booking.html">Booking</a>
-</nav>
+  <section class="tour-section">
+    <div class="tour-banner"></div>
+    <div class="tour-content">
+      <h2>🏜️ Unforgettable Desert Safari Experience</h2>
+      <p>
+        Experience the thrill of Egypt’s Eastern Desert like never before! Ride through golden dunes, meet the Bedouins, enjoy an epic sunset, and indulge in a BBQ dinner under the stars.
+      </p>
+      <ul>
+        <li><strong>12:30 PM:</strong> Hotel pickup by 4x4 vehicle</li>
+        <li><strong>1:00 PM:</strong> Quad bike ride across sand dunes (45 mins)</li>
+        <li><strong>2:00 PM:</strong> Visit Bedouin village & camel ride</li>
+        <li><strong>4:30 PM:</strong> Sunset watch & photography</li>
+        <li><strong>5:00 PM:</strong> Open buffet dinner + soft drinks</li>
+        <li><strong>6:30 PM:</strong> Stargazing and return to hotel</li>
+      </ul>
 
-<div class="container">
-
-  <div class="tour-card">
-    <h3>Super Desert Safari Adventure</h3>
-    <iframe src="https://www.youtube.com/embed/sCDRKu_2GQw" allowfullscreen></iframe>
-    <p>
-      Embark on a thrilling desert journey in Hurghada with quad biking, Bedouin village visits, camel rides, and a magical desert sunset show.
-      <br><br>
-      <strong>Program:</strong><br>
-      - Hotel pickup and transfer to safari station<br>
-      - Quad biking across sand dunes (approx. 45 min)<br>
-      - Spider buggy (optional)<br>
-      - Camel ride in the desert<br>
-      - Visit authentic Bedouin village<br>
-      - Traditional tea and shisha experience<br>
-      - Dinner under the stars with live oriental show<br>
-      - Return transfer to hotel
-    </p>
-    <a href="booking.html" class="book-btn">Book Now</a>
-  </div>
-
-</div>
-
-<footer>
-  <p>&copy; 2025 Hurghada Tours. All rights reserved.</p>
-</footer>
+      <div class="btn-group">
+        <a class="explore-btn" href="hurghada-safari.html">Explore Safari Tours</a>
+        <a class="book-btn" href="booking-hurghada-safari.html">Book Now – €50 / $55 / 2700 EGP</a>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
