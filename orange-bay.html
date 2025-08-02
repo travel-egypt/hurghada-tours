@@ -6,180 +6,105 @@
   <title>Orange Bay Hurghada</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f8f8f8; }
-    header, footer { background: #ff6f00; color: white; padding: 15px; text-align: center; }
-    nav { background: #333; display: flex; justify-content: center; flex-wrap: wrap; }
-    nav a { color: white; padding: 14px 20px; display: block; text-decoration: none; }
-    nav a:hover { background: #ff6f00; }
-    .container { padding: 20px; max-width: 1200px; margin: auto; }
-    .video-box { position: relative; max-width: 800px; margin: 30px auto; cursor: pointer; }
-    .video-box img { width: 100%; border-radius: 8px; }
-    .play-button {
-      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      background: rgba(0,0,0,0.6); color: white; border-radius: 50%;
-      width: 70px; height: 70px; text-align: center; font-size: 30px; line-height: 70px;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
     }
-    .tour-description { margin-top: 30px; }
-    .tour-description h2 { color: #ff6f00; }
-    .language-section { display: none; }
-    .language-section.active { display: block; }
-    select { padding: 8px; font-size: 16px; margin-bottom: 20px; }
 
-    .price-table {
-      margin-top: 20px;
-      border-collapse: collapse;
-      width: 100%;
+    header {
+      background-color: #007bff;
+      padding: 15px;
+      text-align: center;
+      color: white;
     }
-    .price-table th, .price-table td {
-      border: 1px solid #ccc;
-      padding: 10px;
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #007bff;
       text-align: center;
     }
-    .price-table th {
-      background: #f0f0f0;
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 25px;
     }
 
-    .book-button {
-      display: inline-block;
-      margin-top: 20px;
-      background: #ff6f00;
-      color: white;
-      padding: 12px 25px;
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 18px;
     }
-    .book-button:hover { background: #e65c00; }
 
-    @media (max-width: 768px) {
-      .video-box { width: 100%; }
+    .description {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 1.3em;
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .btn:hover {
+      background-color: #218838;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Orange Bay Hurghada</h1>
+    <h2>Hurghada Tours</h2>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="all-tours.html">All Tours</a>
-    <a href="cairo-tours.html">Cairo</a>
-    <a href="luxor-aswan-tours.html">Luxor & Aswan</a>
-    <a href="hurghada-safari.html">Safari</a>
-    <a href="hurghada-snorkeling-adventures.html">Snorkeling</a>
-    <a href="booking.html">Booking</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
   <div class="container">
-    <select id="language-selector" onchange="changeLanguage()">
-      <option value="en">English</option>
-      <option value="de">Deutsch</option>
-      <option value="nl">Nederlands</option>
-      <option value="ru">Русский</option>
-      <option value="fr">Français</option>
-    </select>
+    <h1>Explore Orange Bay Hurghada</h1>
 
-    <div class="video-box" onclick="openVideo()">
-      <img src="https://img.youtube.com/vi/uQIwUi7E8V8/maxresdefault.jpg" alt="Orange Bay Video">
-      <div class="play-button">▶</div>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/uQIwUi7E8V8" title="ORANGE BAY HURGHADA EGYPT 4K 🇪🇬" allowfullscreen></iframe>
     </div>
 
-    <div class="tour-description">
-      <div id="lang-en" class="language-section active">
-        <h2>Explore Orange Bay – Full-Day Island Tour</h2>
-        <p>
-          Enjoy a relaxing boat trip to the beautiful Orange Bay island. Start with a hotel pickup, then snorkel at vibrant reefs, relax on white sandy beaches, and enjoy delicious lunch on board.
-        </p>
-        <ul>
-          <li>✓ Hotel Transfer</li>
-          <li>✓ Snorkeling (2 spots)</li>
-          <li>✓ Orange Bay Island Stay (2-3 hrs)</li>
-          <li>✓ Lunch, soft drinks, water activities</li>
-        </ul>
-      </div>
-
-      <div id="lang-de" class="language-section">
-        <h2>Entdecke Orange Bay – Ganztägiger Inselausflug</h2>
-        <p>
-          Genieße eine entspannte Bootsfahrt zur wunderschönen Insel Orange Bay. Mit Hoteltransfer, Schnorcheln an Korallenriffen, weißem Sandstrand und leckerem Mittagessen an Bord.
-        </p>
-        <ul>
-          <li>✓ Hoteltransfer</li>
-          <li>✓ Schnorcheln (2 Stopps)</li>
-          <li>✓ Orange Bay Aufenthalt (2–3 Std.)</li>
-          <li>✓ Mittagessen, Softdrinks, Wasserspiele</li>
-        </ul>
-      </div>
-
-      <div id="lang-nl" class="language-section">
-        <h2>Ontdek Orange Bay – Eilanddagtocht</h2>
-        <p>
-          Geniet van een ontspannen boottocht naar het prachtige eiland Orange Bay. Inclusief hoteltransfer, snorkelen bij kleurrijke riffen, strandtijd en lunch aan boord.
-        </p>
-        <ul>
-          <li>✓ Hoteltransfer</li>
-          <li>✓ Snorkelen (2 stops)</li>
-          <li>✓ Orange Bay Verblijf (2–3 uur)</li>
-          <li>✓ Lunch, drankjes, wateractiviteiten</li>
-        </ul>
-      </div>
-
-      <div id="lang-ru" class="language-section">
-        <h2>Остров Orange Bay – Экскурсия на целый день</h2>
-        <p>
-          Наслаждайтесь поездкой на лодке к живописному острову Orange Bay. Трансфер из отеля, сноркелинг, белые пляжи и обед на борту.
-        </p>
-        <ul>
-          <li>✓ Трансфер из отеля</li>
-          <li>✓ Сноркелинг (2 остановки)</li>
-          <li>✓ Отдых на острове (2–3 ч)</li>
-          <li>✓ Обед, напитки, водные игры</li>
-        </ul>
-      </div>
-
-      <div id="lang-fr" class="language-section">
-        <h2>Orange Bay – Excursion d'une journée</h2>
-        <p>
-          Profitez d'une sortie en bateau vers l’île paradisiaque d’Orange Bay. Transfert, snorkeling, plage de sable blanc, et déjeuner à bord inclus.
-        </p>
-        <ul>
-          <li>✓ Transfert depuis l'hôtel</li>
-          <li>✓ Snorkeling (2 arrêts)</li>
-          <li>✓ Séjour sur l'île (2–3 h)</li>
-          <li>✓ Déjeuner, boissons, jeux aquatiques</li>
-        </ul>
-      </div>
-
-      <table class="price-table">
-        <tr><th>Currency</th><th>Price per Adult</th><th>Price per Child</th></tr>
-        <tr><td>USD ($)</td><td>$35</td><td>$20</td></tr>
-        <tr><td>EUR (€)</td><td>€32</td><td>€18</td></tr>
-      </table>
-
-      <a href="booking-orange-bay.html" class="book-button">Book Now</a>
+    <div class="description">
+      Discover the breathtaking beauty of Orange Bay Island, one of Hurghada's most serene and picture-perfect destinations.  
+      This full-day excursion includes a relaxing boat ride, two snorkeling stops in crystal-clear waters, and a few hours to unwind on Orange Bay's sandy beach with overwater hammocks and swings.  
+      Enjoy lunch onboard and soft drinks throughout the trip. Ideal for couples, families, and nature lovers.
     </div>
+
+    <div class="price">
+      Only €50 — All Transfers Included
+    </div>
+
+    <a href="booking-orange-bay.html" class="btn">Book Now</a>
   </div>
 
-  <footer>
-    &copy; 2025 Hurghada Tours. All Rights Reserved.
-  </footer>
-
-  <script>
-    function openVideo() {
-      window.open("https://www.youtube.com/watch?v=uQIwUi7E8V8", "_blank");
-    }
-
-    function changeLanguage() {
-      var lang = document.getElementById("language-selector").value;
-      var sections = document.querySelectorAll(".language-section");
-      sections.forEach(function(section) {
-        section.classList.remove("active");
-      });
-      document.getElementById("lang-" + lang).classList.add("active");
-    }
-  </script>
 </body>
 </html>
