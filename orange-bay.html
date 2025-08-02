@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orange Bay Hurghada</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header, nav, section { padding: 20px; }
+    nav { background: #333; color: #fff; display: flex; justify-content: space-between; align-items: center; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; }
+    .language-select { margin-left: auto; }
+    .container { max-width: 1100px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; }
+    .video-thumbnail { position: relative; display: inline-block; cursor: pointer; }
+    .video-thumbnail img { width: 100%; max-width: 700px; border-radius: 10px; }
+    .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      font-size: 60px; color: #fff; background: rgba(0,0,0,0.5); border-radius: 50%; padding: 10px; }
+    .book-btn { display: inline-block; margin-top: 25px; background: #ff6600; color: white; padding: 12px 24px;
+      text-decoration: none; border-radius: 6px; font-size: 18px; }
+    .description { margin-top: 25px; line-height: 1.7; }
+    .hidden { display: none; }
+    h1 { color: #ff6600; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="all-tours.html">All Tours</a>
+    <a href="booking.html">Booking</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <select id="language" class="language-select">
+    <option value="en">English</option>
+    <option value="de">Deutsch</option>
+    <option value="nl">Nederlands</option>
+    <option value="ru">Русский</option>
+    <option value="fr">Français</option>
+  </select>
+</nav>
+
+<section class="container">
+  <h1>Orange Bay Hurghada</h1>
+
+  <!-- Thumbnail with Lightbox trigger -->
+  <div class="video-thumbnail" onclick="openVideo()">
+    <img src="https://img.youtube.com/vi/uQIwUi7E8V8/maxresdefault.jpg" alt="Orange Bay Hurghada">
+    <div class="play-button">&#9658;</div>
+  </div>
+
+  <!-- Hidden lightbox iframe -->
+  <div id="lightbox" class="hidden">
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/uQIwUi7E8V8?autoplay=1"
+      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- Program Description (All languages) -->
+  <div id="desc-en" class="description">
+    <h2>Full-Day Island Experience</h2>
+    <p>Discover the breathtaking beauty of Orange Bay, the most famous island in the Red Sea. Enjoy a scenic boat ride from Hurghada, two snorkeling stops, fun water games, lunch on board, and 2–3 hours of chill time on the white sandy beach of Orange Bay.</p>
+    <ul>
+      <li>🏖 Hotel pickup & drop-off</li>
+      <li>🛥 Boat cruise with music & sunbathing</li>
+      <li>🤿 Two snorkeling stops with gear</li>
+      <li>🍽 Buffet lunch on board</li>
+      <li>📷 Free time on the island for relaxation and photos</li>
+    </ul>
+    <p><strong>Duration:</strong> 7–8 hours | <strong>Start:</strong> 8:30 AM | <strong>What to bring:</strong> Towel, sunscreen, swimwear</p>
+  </div>
+
+  <div id="desc-de" class="description hidden">
+    <h2>Tagesausflug zur Insel</h2>
+    <p>Entdecken Sie die atemberaubende Schönheit der Orange Bay – die berühmteste Insel im Roten Meer. Bootsfahrt, Schnorcheln, Wasserspiele und Entspannung am weißen Sandstrand – alles inklusive!</p>
+    <ul>
+      <li>🏖 Abholung vom Hotel & Rücktransfer</li>
+      <li>🛥 Bootstour mit Musik & Sonnenbaden</li>
+      <li>🤿 Zwei Schnorchelstopps mit Ausrüstung</li>
+      <li>🍽 Mittagessen an Bord</li>
+      <li>📷 Zeit auf der Insel zum Entspannen und Fotografieren</li>
+    </ul>
+  </div>
+
+  <div id="desc-nl" class="description hidden">
+    <h2>Volledige Dagervaring op het Eiland</h2>
+    <p>Ontdek de adembenemende schoonheid van Orange Bay, het beroemdste eiland in de Rode Zee. Inclusief boottocht, snorkelstops, leuke watersporten, lunch en strandtijd.</p>
+    <ul>
+      <li>🏖 Hotel ophaalservice</li>
+      <li>🛥 Boottocht met muziek & zonnen</li>
+      <li>🤿 Twee snorkelstops met uitrusting</li>
+      <li>🍽 Lunchbuffet aan boord</li>
+      <li>📷 Tijd op het eiland voor ontspanning en foto's</li>
+    </ul>
+  </div>
+
+  <div id="desc-ru" class="description hidden">
+    <h2>Целый день на острове</h2>
+    <p>Исследуйте невероятную красоту Orange Bay – самого известного острова Красного моря. Катание на лодке, снорклинг, водные развлечения, обед и отдых на пляже!</p>
+    <ul>
+      <li>🏖 Трансфер из отеля и обратно</li>
+      <li>🛥 Прогулка на катере с музыкой и загоранием</li>
+      <li>🤿 Два остановки для снорклинга</li>
+      <li>🍽 Обед на борту</li>
+      <li>📷 Свободное время на острове</li>
+    </ul>
+  </div>
+
+  <div id="desc-fr" class="description hidden">
+    <h2>Excursion d'une journée complète</h2>
+    <p>Découvrez la beauté exceptionnelle d'Orange Bay, l'île la plus célèbre de la mer Rouge. Balade en bateau, plongée en apnée, jeux aquatiques, déjeuner et plage vous attendent.</p>
+    <ul>
+      <li>🏖 Transfert depuis/vers votre hôtel</li>
+      <li>🛥 Croisière avec musique & bronzage</li>
+      <li>🤿 Deux arrêts pour snorkeling</li>
+      <li>🍽 Déjeuner buffet à bord</li>
+      <li>📷 Temps libre sur l'île</li>
+    </ul>
+  </div>
+
+  <!-- Book Now button -->
+  <a class="book-btn" href="booking-orange-bay.html">Book Now</a>
+</section>
+
+<script>
+  const langSelector = document.getElementById("language");
+  const sections = {
+    en: document.getElementById("desc-en"),
+    de: document.getElementById("desc-de"),
+    nl: document.getElementById("desc-nl"),
+    ru: document.getElementById("desc-ru"),
+    fr: document.getElementById("desc-fr")
+  };
+
+  langSelector.addEventListener("change", () => {
+    const selected = langSelector.value;
+    Object.keys(sections).forEach(key => {
+      sections[key].classList.toggle("hidden", key !== selected);
+    });
+  });
+
+  function openVideo() {
+    document.querySelector('.video-thumbnail').classList.add("hidden");
+    document.getElementById("lightbox").classList.remove("hidden");
+  }
+</script>
+
+</body>
+</html>
