@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book: Nile Dinner Cruise and Belly Dance Show</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+      color: #222;
+    }
+    header {
+      background-color: #004466;
+      padding: 15px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: #fff;
+      font-size: 24px;
+    }
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #004466;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #004466;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #02738c;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hurghada Tours</h1>
+  </header>
+
+  <div class="container">
+    <h2>Book: Nile Dinner Cruise and Belly Dance Show</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="Full Name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="Phone Number" required>
+
+      <label for="tour">Select Tour</label>
+      <select id="tour" name="Selected Tour">
+        <option value="Nile Dinner Cruise and Belly Dance Show">Nile Dinner Cruise and Belly Dance Show</option>
+      </select>
+
+      <label for="date">Date of the Tour</label>
+      <input type="text" id="date" name="Date" placeholder="dd/mm/yyyy" required>
+
+      <label for="people">Number of People</label>
+      <input type="number" id="people" name="Number of People" required>
+
+      <label for="contact-method">Preferred Contact Method</label>
+      <select id="contact-method" name="Preferred Contact Method">
+        <option value="WhatsApp">WhatsApp</option>
+        <option value="Email">Email</option>
+        <option value="Phone Call">Phone Call</option>
+      </select>
+
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" name="Additional Notes" rows="4" placeholder="Any special requests..."></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Hurghada Tours. All rights reserved.
+  </footer>
+
+</body>
+</html>
