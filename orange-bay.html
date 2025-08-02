@@ -6,144 +6,180 @@
   <title>Orange Bay Hurghada</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header, nav, section { padding: 20px; }
-    nav { background: #333; color: #fff; display: flex; justify-content: space-between; align-items: center; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; }
-    .language-select { margin-left: auto; }
-    .container { max-width: 1100px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; }
-    .video-thumbnail { position: relative; display: inline-block; cursor: pointer; }
-    .video-thumbnail img { width: 100%; max-width: 700px; border-radius: 10px; }
-    .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      font-size: 60px; color: #fff; background: rgba(0,0,0,0.5); border-radius: 50%; padding: 10px; }
-    .book-btn { display: inline-block; margin-top: 25px; background: #ff6600; color: white; padding: 12px 24px;
-      text-decoration: none; border-radius: 6px; font-size: 18px; }
-    .description { margin-top: 25px; line-height: 1.7; }
-    .hidden { display: none; }
-    h1 { color: #ff6600; }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f8f8f8; }
+    header, footer { background: #ff6f00; color: white; padding: 15px; text-align: center; }
+    nav { background: #333; display: flex; justify-content: center; flex-wrap: wrap; }
+    nav a { color: white; padding: 14px 20px; display: block; text-decoration: none; }
+    nav a:hover { background: #ff6f00; }
+    .container { padding: 20px; max-width: 1200px; margin: auto; }
+    .video-box { position: relative; max-width: 800px; margin: 30px auto; cursor: pointer; }
+    .video-box img { width: 100%; border-radius: 8px; }
+    .play-button {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.6); color: white; border-radius: 50%;
+      width: 70px; height: 70px; text-align: center; font-size: 30px; line-height: 70px;
+    }
+    .tour-description { margin-top: 30px; }
+    .tour-description h2 { color: #ff6f00; }
+    .language-section { display: none; }
+    .language-section.active { display: block; }
+    select { padding: 8px; font-size: 16px; margin-bottom: 20px; }
+
+    .price-table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .price-table th, .price-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    .price-table th {
+      background: #f0f0f0;
+    }
+
+    .book-button {
+      display: inline-block;
+      margin-top: 20px;
+      background: #ff6f00;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 18px;
+    }
+    .book-button:hover { background: #e65c00; }
+
+    @media (max-width: 768px) {
+      .video-box { width: 100%; }
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Orange Bay Hurghada</h1>
+  </header>
 
-<nav>
-  <div>
+  <nav>
     <a href="index.html">Home</a>
     <a href="all-tours.html">All Tours</a>
+    <a href="cairo-tours.html">Cairo</a>
+    <a href="luxor-aswan-tours.html">Luxor & Aswan</a>
+    <a href="hurghada-safari.html">Safari</a>
+    <a href="hurghada-snorkeling-adventures.html">Snorkeling</a>
     <a href="booking.html">Booking</a>
     <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <select id="language-selector" onchange="changeLanguage()">
+      <option value="en">English</option>
+      <option value="de">Deutsch</option>
+      <option value="nl">Nederlands</option>
+      <option value="ru">Русский</option>
+      <option value="fr">Français</option>
+    </select>
+
+    <div class="video-box" onclick="openVideo()">
+      <img src="https://img.youtube.com/vi/uQIwUi7E8V8/maxresdefault.jpg" alt="Orange Bay Video">
+      <div class="play-button">▶</div>
+    </div>
+
+    <div class="tour-description">
+      <div id="lang-en" class="language-section active">
+        <h2>Explore Orange Bay – Full-Day Island Tour</h2>
+        <p>
+          Enjoy a relaxing boat trip to the beautiful Orange Bay island. Start with a hotel pickup, then snorkel at vibrant reefs, relax on white sandy beaches, and enjoy delicious lunch on board.
+        </p>
+        <ul>
+          <li>✓ Hotel Transfer</li>
+          <li>✓ Snorkeling (2 spots)</li>
+          <li>✓ Orange Bay Island Stay (2-3 hrs)</li>
+          <li>✓ Lunch, soft drinks, water activities</li>
+        </ul>
+      </div>
+
+      <div id="lang-de" class="language-section">
+        <h2>Entdecke Orange Bay – Ganztägiger Inselausflug</h2>
+        <p>
+          Genieße eine entspannte Bootsfahrt zur wunderschönen Insel Orange Bay. Mit Hoteltransfer, Schnorcheln an Korallenriffen, weißem Sandstrand und leckerem Mittagessen an Bord.
+        </p>
+        <ul>
+          <li>✓ Hoteltransfer</li>
+          <li>✓ Schnorcheln (2 Stopps)</li>
+          <li>✓ Orange Bay Aufenthalt (2–3 Std.)</li>
+          <li>✓ Mittagessen, Softdrinks, Wasserspiele</li>
+        </ul>
+      </div>
+
+      <div id="lang-nl" class="language-section">
+        <h2>Ontdek Orange Bay – Eilanddagtocht</h2>
+        <p>
+          Geniet van een ontspannen boottocht naar het prachtige eiland Orange Bay. Inclusief hoteltransfer, snorkelen bij kleurrijke riffen, strandtijd en lunch aan boord.
+        </p>
+        <ul>
+          <li>✓ Hoteltransfer</li>
+          <li>✓ Snorkelen (2 stops)</li>
+          <li>✓ Orange Bay Verblijf (2–3 uur)</li>
+          <li>✓ Lunch, drankjes, wateractiviteiten</li>
+        </ul>
+      </div>
+
+      <div id="lang-ru" class="language-section">
+        <h2>Остров Orange Bay – Экскурсия на целый день</h2>
+        <p>
+          Наслаждайтесь поездкой на лодке к живописному острову Orange Bay. Трансфер из отеля, сноркелинг, белые пляжи и обед на борту.
+        </p>
+        <ul>
+          <li>✓ Трансфер из отеля</li>
+          <li>✓ Сноркелинг (2 остановки)</li>
+          <li>✓ Отдых на острове (2–3 ч)</li>
+          <li>✓ Обед, напитки, водные игры</li>
+        </ul>
+      </div>
+
+      <div id="lang-fr" class="language-section">
+        <h2>Orange Bay – Excursion d'une journée</h2>
+        <p>
+          Profitez d'une sortie en bateau vers l’île paradisiaque d’Orange Bay. Transfert, snorkeling, plage de sable blanc, et déjeuner à bord inclus.
+        </p>
+        <ul>
+          <li>✓ Transfert depuis l'hôtel</li>
+          <li>✓ Snorkeling (2 arrêts)</li>
+          <li>✓ Séjour sur l'île (2–3 h)</li>
+          <li>✓ Déjeuner, boissons, jeux aquatiques</li>
+        </ul>
+      </div>
+
+      <table class="price-table">
+        <tr><th>Currency</th><th>Price per Adult</th><th>Price per Child</th></tr>
+        <tr><td>USD ($)</td><td>$35</td><td>$20</td></tr>
+        <tr><td>EUR (€)</td><td>€32</td><td>€18</td></tr>
+      </table>
+
+      <a href="booking-orange-bay.html" class="book-button">Book Now</a>
+    </div>
   </div>
-  <select id="language" class="language-select">
-    <option value="en">English</option>
-    <option value="de">Deutsch</option>
-    <option value="nl">Nederlands</option>
-    <option value="ru">Русский</option>
-    <option value="fr">Français</option>
-  </select>
-</nav>
 
-<section class="container">
-  <h1>Orange Bay Hurghada</h1>
+  <footer>
+    &copy; 2025 Hurghada Tours. All Rights Reserved.
+  </footer>
 
-  <!-- Thumbnail with Lightbox trigger -->
-  <div class="video-thumbnail" onclick="openVideo()">
-    <img src="https://img.youtube.com/vi/uQIwUi7E8V8/maxresdefault.jpg" alt="Orange Bay Hurghada">
-    <div class="play-button">&#9658;</div>
-  </div>
+  <script>
+    function openVideo() {
+      window.open("https://www.youtube.com/watch?v=uQIwUi7E8V8", "_blank");
+    }
 
-  <!-- Hidden lightbox iframe -->
-  <div id="lightbox" class="hidden">
-    <iframe width="100%" height="500" src="https://www.youtube.com/embed/uQIwUi7E8V8?autoplay=1"
-      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  </div>
-
-  <!-- Program Description (All languages) -->
-  <div id="desc-en" class="description">
-    <h2>Full-Day Island Experience</h2>
-    <p>Discover the breathtaking beauty of Orange Bay, the most famous island in the Red Sea. Enjoy a scenic boat ride from Hurghada, two snorkeling stops, fun water games, lunch on board, and 2–3 hours of chill time on the white sandy beach of Orange Bay.</p>
-    <ul>
-      <li>🏖 Hotel pickup & drop-off</li>
-      <li>🛥 Boat cruise with music & sunbathing</li>
-      <li>🤿 Two snorkeling stops with gear</li>
-      <li>🍽 Buffet lunch on board</li>
-      <li>📷 Free time on the island for relaxation and photos</li>
-    </ul>
-    <p><strong>Duration:</strong> 7–8 hours | <strong>Start:</strong> 8:30 AM | <strong>What to bring:</strong> Towel, sunscreen, swimwear</p>
-  </div>
-
-  <div id="desc-de" class="description hidden">
-    <h2>Tagesausflug zur Insel</h2>
-    <p>Entdecken Sie die atemberaubende Schönheit der Orange Bay – die berühmteste Insel im Roten Meer. Bootsfahrt, Schnorcheln, Wasserspiele und Entspannung am weißen Sandstrand – alles inklusive!</p>
-    <ul>
-      <li>🏖 Abholung vom Hotel & Rücktransfer</li>
-      <li>🛥 Bootstour mit Musik & Sonnenbaden</li>
-      <li>🤿 Zwei Schnorchelstopps mit Ausrüstung</li>
-      <li>🍽 Mittagessen an Bord</li>
-      <li>📷 Zeit auf der Insel zum Entspannen und Fotografieren</li>
-    </ul>
-  </div>
-
-  <div id="desc-nl" class="description hidden">
-    <h2>Volledige Dagervaring op het Eiland</h2>
-    <p>Ontdek de adembenemende schoonheid van Orange Bay, het beroemdste eiland in de Rode Zee. Inclusief boottocht, snorkelstops, leuke watersporten, lunch en strandtijd.</p>
-    <ul>
-      <li>🏖 Hotel ophaalservice</li>
-      <li>🛥 Boottocht met muziek & zonnen</li>
-      <li>🤿 Twee snorkelstops met uitrusting</li>
-      <li>🍽 Lunchbuffet aan boord</li>
-      <li>📷 Tijd op het eiland voor ontspanning en foto's</li>
-    </ul>
-  </div>
-
-  <div id="desc-ru" class="description hidden">
-    <h2>Целый день на острове</h2>
-    <p>Исследуйте невероятную красоту Orange Bay – самого известного острова Красного моря. Катание на лодке, снорклинг, водные развлечения, обед и отдых на пляже!</p>
-    <ul>
-      <li>🏖 Трансфер из отеля и обратно</li>
-      <li>🛥 Прогулка на катере с музыкой и загоранием</li>
-      <li>🤿 Два остановки для снорклинга</li>
-      <li>🍽 Обед на борту</li>
-      <li>📷 Свободное время на острове</li>
-    </ul>
-  </div>
-
-  <div id="desc-fr" class="description hidden">
-    <h2>Excursion d'une journée complète</h2>
-    <p>Découvrez la beauté exceptionnelle d'Orange Bay, l'île la plus célèbre de la mer Rouge. Balade en bateau, plongée en apnée, jeux aquatiques, déjeuner et plage vous attendent.</p>
-    <ul>
-      <li>🏖 Transfert depuis/vers votre hôtel</li>
-      <li>🛥 Croisière avec musique & bronzage</li>
-      <li>🤿 Deux arrêts pour snorkeling</li>
-      <li>🍽 Déjeuner buffet à bord</li>
-      <li>📷 Temps libre sur l'île</li>
-    </ul>
-  </div>
-
-  <!-- Book Now button -->
-  <a class="book-btn" href="booking-orange-bay.html">Book Now</a>
-</section>
-
-<script>
-  const langSelector = document.getElementById("language");
-  const sections = {
-    en: document.getElementById("desc-en"),
-    de: document.getElementById("desc-de"),
-    nl: document.getElementById("desc-nl"),
-    ru: document.getElementById("desc-ru"),
-    fr: document.getElementById("desc-fr")
-  };
-
-  langSelector.addEventListener("change", () => {
-    const selected = langSelector.value;
-    Object.keys(sections).forEach(key => {
-      sections[key].classList.toggle("hidden", key !== selected);
-    });
-  });
-
-  function openVideo() {
-    document.querySelector('.video-thumbnail').classList.add("hidden");
-    document.getElementById("lightbox").classList.remove("hidden");
-  }
-</script>
-
+    function changeLanguage() {
+      var lang = document.getElementById("language-selector").value;
+      var sections = document.querySelectorAll(".language-section");
+      sections.forEach(function(section) {
+        section.classList.remove("active");
+      });
+      document.getElementById("lang-" + lang).classList.add("active");
+    }
+  </script>
 </body>
 </html>
