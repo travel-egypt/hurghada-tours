@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlTag">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>All Tours | Hurghada Tours</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       background: #f9f9f9;
     }
 
@@ -32,6 +32,7 @@
       background: #444;
       border: none;
       padding: 5px 10px;
+      font-size: 14px;
     }
 
     .container {
@@ -46,6 +47,11 @@
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+
+    .tour-card:hover {
+      transform: scale(1.01);
     }
 
     .tour-card img {
@@ -60,6 +66,7 @@
 
     .tour-content h3 {
       margin-top: 0;
+      font-size: 20px;
     }
 
     .btn {
@@ -75,12 +82,21 @@
     .description p {
       margin-bottom: 8px;
     }
+
+    @media (max-width: 768px) {
+      .tour-content h3 {
+        font-size: 18px;
+      }
+      .btn {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
   <nav class="navbar">
     <a href="index.html" class="logo">Hurghada Tours</a>
-    <select class="lang-select" onchange="changeLanguage(this.value)">
+    <select class="lang-select" id="langSwitcher">
       <option value="en">English</option>
       <option value="de">Deutsch</option>
       <option value="nl">Nederlands</option>
@@ -90,10 +106,18 @@
   </nav>
 
   <div class="container" id="tours-container">
-    <!-- سيتم إدراج الرحلات ديناميكيًا عبر الجافاسكربت -->
+    <!-- سيتم إدراج الرحلات هنا -->
   </div>
 
   <script>
+    const translations = {
+      en: { bookNow: "Book Now" },
+      de: { bookNow: "Jetzt Buchen" },
+      nl: { bookNow: "Boek Nu" },
+      ru: { bookNow: "Забронировать" },
+      fr: { bookNow: "Réserver" }
+    };
+
     const toursData = [
       {
         image: "https://img.youtube.com/vi/VQ6t1dgjF5Y/maxresdefault.jpg",
@@ -123,21 +147,57 @@
         }
       },
 
-      // يمكنك نسخ هذه البنية لباقي الرحلات
+      // مثال لجولة إضافية (انسخ وعدل حسب الحاجة)
+      {
+        image: "https://img.youtube.com/vi/fQG6yLeT1O0/maxresdefault.jpg",
+        video: "https://www.youtube.com/watch?v=fQG6yLeT1O0",
+        booking: "booking.html?tour=snorkeling",
+        translations: {
+          en: {
+            title: "Snorkeling Trip in Giftun Island",
+            description: "Enjoy a full-day boat trip to the beautiful Giftun Island with snorkeling, lunch, and sunbathing."
+          },
+          de: {
+            title: "Schnorchelausflug zur Giftun-Insel",
+            description: "Genieße einen Tagesausflug mit dem Boot zur wunderschönen Insel Giftun mit Schnorcheln, Mittagessen und Sonnenbaden."
+          },
+          nl: {
+            title: "Snorkeltocht naar Giftun-eiland",
+            description: "Geniet van een dagtocht per boot naar het prachtige Giftun-eiland met snorkelen, lunch en zonnebaden."
+          },
+          ru: {
+            title: "Плавание с маской на остров Гифтун",
+            description: "Наслаждайтесь морской прогулкой на остров Гифтун с обедом и купанием с маской и трубкой."
+          },
+          fr: {
+            title: "Excursion Plongée à l'île Giftun",
+            description: "Profitez d'une journée en bateau vers l'île Giftun avec plongée, déjeuner et bronzage."
+          }
+        }
+      }
     ];
 
-    const lang = localStorage.getItem('lang') || 'en';
+    const langSwitcher = document.getElementById("langSwitcher");
+    const htmlTag = document.getElementById("htmlTag");
 
-    function changeLanguage(selectedLang) {
-      localStorage.setItem('lang', selectedLang);
-      location.reload();
-    }
+    let currentLang = localStorage.getItem('preferredLang') || 'en';
+    langSwitcher.value = currentLang;
+    htmlTag.setAttribute("lang", currentLang);
+
+    langSwitcher.addEventListener("change", () => {
+      const selectedLang = langSwitcher.value;
+      localStorage.setItem("preferredLang", selectedLang);
+      location.reload(); // إعادة تحميل الصفحة لتحديث النصوص
+    });
 
     function renderTours(language) {
       const container = document.getElementById('tours-container');
       container.innerHTML = '';
+
       toursData.forEach(tour => {
         const t = tour.translations[language] || tour.translations['en'];
+        const bookLabel = translations[language]?.bookNow || "Book Now";
+
         container.innerHTML += `
           <div class="tour-card">
             <a href="${tour.video}" target="_blank">
@@ -148,14 +208,14 @@
               <div class="description">
                 <p>${t.description}</p>
               </div>
-              <a href="${tour.booking}" class="btn">Book Now</a>
+              <a href="${tour.booking}" class="btn">${bookLabel}</a>
             </div>
           </div>
         `;
       });
     }
 
-    renderTours(lang);
+    renderTours(currentLang);
   </script>
 </body>
 </html>
