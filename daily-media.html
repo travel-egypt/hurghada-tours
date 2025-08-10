@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Moments | Hurghada Tours</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+
+    header {
+      background-color: #004466;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .media-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .media-card:hover {
+      transform: scale(1.02);
+    }
+
+    .media-card img,
+    .media-card iframe {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .media-card .caption {
+      padding: 10px;
+      font-size: 15px;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Daily Moments from Hurghada Tours</h1>
+  </header>
+
+  <div class="container">
+    <div class="gallery">
+
+      <!-- فيديو: YouTube Short -->
+      <div class="media-card">
+        <iframe src="https://www.youtube.com/embed/Z-HBj_8wUfY" frameborder="0" allowfullscreen></iframe>
+        <div class="caption">Short Moment from Our Trip - August 2025</div>
+      </div>
+
+      <!-- مثال على صورة -->
+      <div class="media-card">
+        <img src="https://example.com/photo1.jpg" alt="Desert Safari Tour" />
+        <div class="caption">Desert Safari Tour - August 5, 2025</div>
+      </div>
+
+      <!-- مثال على فيديو يوتيوب -->
+      <div class="media-card">
+        <iframe src="https://www.youtube.com/embed/VQ6t1dgjF5Y" frameborder="0" allowfullscreen></iframe>
+        <div class="caption">Nile Cruise Evening - Belly Dance Show</div>
+      </div>
+
+      <!-- صورة إضافية -->
+      <div class="media-card">
+        <img src="https://example.com/photo2.jpg" alt="Giftun Island Snorkeling" />
+        <div class="caption">Snorkeling in Giftun Island - July 28, 2025</div>
+      </div>
+
+      <!-- فيديو إضافي -->
+      <div class="media-card">
+        <iframe src="https://www.youtube.com/embed/fQG6yLeT1O0" frameborder="0" allowfullscreen></iframe>
+        <div class="caption">Orange Bay Beach Fun</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Hurghada Tours. All rights reserved.
+  </footer>
+
+</body>
+</html>
