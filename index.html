@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlTag">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,11 +10,13 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     html, body {
       height: 100%;
       font-family: 'Segoe UI', sans-serif;
-      overflow: hidden;
+      overflow-x: hidden;
     }
+
     .video-bg {
       position: fixed;
       top: 0;
@@ -23,6 +25,13 @@
       height: 100%;
       z-index: -1;
     }
+
+    .video-bg iframe {
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* يمنع التفاعل مع الفيديو */
+    }
+
     .overlay {
       position: absolute;
       top: 0;
@@ -37,11 +46,14 @@
       text-align: center;
       color: #fff;
       padding: 20px;
+      animation: fadeIn 1.5s ease-in-out;
     }
+
     .overlay h1 {
       font-size: 40px;
       margin-bottom: 20px;
     }
+
     .enter-btn {
       background-color: #ffcc00;
       color: #000;
@@ -54,9 +66,11 @@
       transition: background 0.3s;
       cursor: pointer;
     }
+
     .enter-btn:hover {
       background-color: #e6b800;
     }
+
     .language-selector {
       position: absolute;
       top: 20px;
@@ -65,22 +79,38 @@
       border-radius: 5px;
       padding: 5px;
     }
+
     .language-selector select {
       padding: 5px;
       font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .overlay h1 {
+        font-size: 28px;
+      }
+      .enter-btn {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
 <body>
 
-  <!-- خلفية فيديو يوتيوب -->
+  <!-- خلفية الفيديو -->
   <div class="video-bg">
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/nfgq0D-gCA4?autoplay=1&mute=1&controls=0&loop=1&playlist=nfgq0D-gCA4&modestbranding=1&showinfo=0" 
+    <iframe src="https://www.youtube.com/embed/nfgq0D-gCA4?autoplay=1&mute=1&controls=0&loop=1&playlist=nfgq0D-gCA4&modestbranding=1&showinfo=0"
       frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
     </iframe>
   </div>
 
-  <!-- محتوى تراكبي -->
+  <!-- المحتوى التراكبي -->
   <div class="overlay">
     <h1 id="main-heading">Discover Egypt with Hurghada Tours</h1>
     <a class="enter-btn" href="all-tours.html" id="enter-button">Enter Site</a>
@@ -124,11 +154,26 @@
     const switcher = document.getElementById("languageSwitcher");
     const heading = document.getElementById("main-heading");
     const button = document.getElementById("enter-button");
+    const htmlTag = document.getElementById("htmlTag");
 
+    // عند تغيير اللغة
     switcher.addEventListener("change", () => {
       const lang = switcher.value;
+      localStorage.setItem("preferredLang", lang);
       heading.textContent = translations[lang].heading;
       button.textContent = translations[lang].button;
+      htmlTag.setAttribute("lang", lang);
+    });
+
+    // تحميل اللغة المحفوظة عند فتح الصفحة
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedLang = localStorage.getItem("preferredLang");
+      if (savedLang && translations[savedLang]) {
+        switcher.value = savedLang;
+        heading.textContent = translations[savedLang].heading;
+        button.textContent = translations[savedLang].button;
+        htmlTag.setAttribute("lang", savedLang);
+      }
     });
   </script>
 
