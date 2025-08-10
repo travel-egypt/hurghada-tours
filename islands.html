@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>All Tours | Hurghada Tours</title>
+  <title>Island Trips | Hurghada Tours</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,7 +13,7 @@
     }
 
     .navbar {
-      background: #333;
+      background: #006994;
       color: white;
       padding: 15px 20px;
       display: flex;
@@ -29,7 +29,7 @@
 
     .lang-select {
       color: #fff;
-      background: #444;
+      background: #0084b4;
       border: none;
       padding: 5px 10px;
       font-size: 14px;
@@ -120,58 +120,56 @@
 
     const toursData = [
       {
-        image: "https://img.youtube.com/vi/VQ6t1dgjF5Y/maxresdefault.jpg",
-        video: "https://www.youtube.com/watch?v=VQ6t1dgjF5Y",
-        booking: "booking.html?tour=safari",
+        image: "https://img.youtube.com/vi/fQG6yLeT1O0/maxresdefault.jpg",
+        video: "https://www.youtube.com/watch?v=fQG6yLeT1O0",
+        booking: "booking.html?tour=giftun",
         translations: {
           en: {
-            title: "Hurghada Desert Safari Adventure",
-            description: "Explore the vast Egyptian desert on a thrilling safari trip. Ride quad bikes, meet Bedouins, and watch the sunset in the golden sands."
+            title: "Giftun Island Snorkeling Trip",
+            description: "Enjoy snorkeling, swimming, and sunshine on one of Hurghada’s most beautiful islands."
           },
           de: {
-            title: "Hurghada Wüstensafari-Abenteuer",
-            description: "Erkunde die weite ägyptische Wüste auf einer spannenden Safari. Fahre mit dem Quad, triff Beduinen und genieße den Sonnenuntergang."
+            title: "Giftun Insel Schnorchelausflug",
+            description: "Genießen Sie Schnorcheln, Schwimmen und Sonne auf einer der schönsten Inseln in Hurghada."
           },
           nl: {
-            title: "Hurghada Woestijnsafari Avontuur",
-            description: "Verken de uitgestrekte Egyptische woestijn tijdens een spannende safari. Rijd op een quad, ontmoet bedoeïenen en zie de zonsondergang."
+            title: "Giftun-eiland Snorkeltocht",
+            description: "Geniet van snorkelen, zwemmen en zon op een van de mooiste eilanden van Hurghada."
           },
           ru: {
-            title: "Пустынное сафари в Хургаде",
-            description: "Исследуйте египетскую пустыню на сафари. Квадроциклы, бедуины и закат среди песков ждут вас."
+            title: "Тур на остров Гифтун",
+            description: "Наслаждайтесь сноркелингом, плаванием и солнцем на одном из лучших островов Хургады."
           },
           fr: {
-            title: "Aventure Safari dans le Désert de Hurghada",
-            description: "Explorez le vaste désert égyptien lors d'un safari palpitant. Faites du quad, rencontrez des Bédouins et admirez le coucher du soleil."
+            title: "Excursion à l'île Giftun",
+            description: "Profitez de la plongée, de la baignade et du soleil sur l'une des plus belles îles d'Hurghada."
           }
         }
       },
-
-      // مثال لجولة إضافية (انسخ وعدل حسب الحاجة)
       {
-        image: "https://img.youtube.com/vi/fQG6yLeT1O0/maxresdefault.jpg",
-        video: "https://www.youtube.com/watch?v=fQG6yLeT1O0",
-        booking: "booking.html?tour=snorkeling",
+        image: "https://img.youtube.com/vi/_1AvktFEQP4/maxresdefault.jpg",
+        video: "https://www.youtube.com/watch?v=_1AvktFEQP4",
+        booking: "booking.html?tour=orange-bay",
         translations: {
           en: {
-            title: "Snorkeling Trip in Giftun Island",
-            description: "Enjoy a full-day boat trip to the beautiful Giftun Island with snorkeling, lunch, and sunbathing."
+            title: "Orange Bay Island Experience",
+            description: "Relax on white sandy beaches, snorkel in crystal waters, and enjoy a paradise-like day."
           },
           de: {
-            title: "Schnorchelausflug zur Giftun-Insel",
-            description: "Genieße einen Tagesausflug mit dem Boot zur wunderschönen Insel Giftun mit Schnorcheln, Mittagessen und Sonnenbaden."
+            title: "Orange Bay Inselerlebnis",
+            description: "Entspannen Sie an weißen Sandstränden, schnorcheln Sie im klaren Wasser und genießen Sie den Tag im Paradies."
           },
           nl: {
-            title: "Snorkeltocht naar Giftun-eiland",
-            description: "Geniet van een dagtocht per boot naar het prachtige Giftun-eiland met snorkelen, lunch en zonnebaden."
+            title: "Orange Bay Eilandervaring",
+            description: "Ontspan op witte zandstranden, snorkel in helder water en geniet van een paradijselijke dag."
           },
           ru: {
-            title: "Плавание с маской на остров Гифтун",
-            description: "Наслаждайтесь морской прогулкой на остров Гифтун с обедом и купанием с маской и трубкой."
+            title: "Остров Ориндж Бэй",
+            description: "Отдохните на белоснежных пляжах, занимайтесь сноркелингом и наслаждайтесь райским днем."
           },
           fr: {
-            title: "Excursion Plongée à l'île Giftun",
-            description: "Profitez d'une journée en bateau vers l'île Giftun avec plongée, déjeuner et bronzage."
+            title: "Expérience de l'île Orange Bay",
+            description: "Détendez-vous sur des plages de sable blanc, plongez dans une eau cristalline et profitez d’une journée paradisiaque."
           }
         }
       }
@@ -187,7 +185,7 @@
     langSwitcher.addEventListener("change", () => {
       const selectedLang = langSwitcher.value;
       localStorage.setItem("preferredLang", selectedLang);
-      location.reload(); // إعادة تحميل الصفحة لتحديث النصوص
+      location.reload(); // reload to reflect changes
     });
 
     function renderTours(language) {
